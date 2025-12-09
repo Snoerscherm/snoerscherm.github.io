@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snoer & Scherm - Reparatie en Hulp aan Huis</title>
+    
+    <link rel="icon" type="image/svg+xml" href="plug.svg">
+
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Of een kleur die bij je flyer past */
+            background-color: #f4f4f4;
             font-family: Arial, sans-serif;
             text-align: center;
         }
         .container {
-            max-width: 800px; /* Zorgt dat het niet te breed wordt op grote schermen */
+            max-width: 800px;
             margin: 0 auto;
+            background-color: white; /* Zorgt dat de achtergrond achter de flyer wit is */
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
         img {
@@ -22,32 +26,41 @@
             height: auto;
             display: block;
         }
+        /* De stijl voor beide knoppen */
         .cta-button {
             display: block;
-            background-color: #ffd700; /* Jouw gele kleur */
+            background-color: #ffd700; /* Jouw Snoer & Scherm Geel */
             color: #000;
             padding: 20px;
             text-decoration: none;
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-weight: bold;
-            margin-top: -5px; /* Sluit direct aan op de afbeelding */
+            transition: background 0.3s;
         }
         .cta-button:hover {
             background-color: #e6c200;
+        }
+        
+        /* Specifieke aanpassing voor de mailknop (iets andere kleur?) */
+        .mail-btn {
+            background-color: #333; /* Donkergrijs voor contrast */
+            color: #fff;
+        }
+        .mail-btn:hover {
+            background-color: #000;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="Voorkant.jpg" alt="Snoer en Scherm Flyer Voorkant">
-        
-        <img src="Achterkant.jpg" alt="Snoer en Scherm Flyer Achterkant">
+        <a href="tel:0686133563" class="cta-button">📞 Bel Maurits: 06 86133563</a>
 
-        <a href="tel:0686133563" class="cta-button">📞 Bel Maurits Direct: 06 86133563</a>
+        <img src="voorkant.jpg" alt="Snoer en Scherm Flyer Voorkant">
+        <img src="achterkant.jpg" alt="Snoer en Scherm Flyer Achterkant">
+
+        <a href="mailto:maurits@snoerscherm.nl" class="cta-button mail-btn">✉️ Stuur een e-mail</a>
     </div>
 
 </body>
-
 </html>
-
