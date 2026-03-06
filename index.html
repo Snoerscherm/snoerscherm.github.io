@@ -1,67 +1,393 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snoer & Scherm - Reparatie en Hulp aan Huis</title>
-    
-    <link rel="icon" type="image/svg+xml" href="plug.svg">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            text-align: center;
+    <title>Snoer & Scherm | Computerhulp & Reparatie in Delfgauw</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        snoergeel: '#FFC82C',
+                        snoerzwart: '#1A1A1A',
+                        snoergrijs: '#F8F9FA',
+                    },
+                    boxShadow: {
+                        'zacht': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                    }
+                }
+            }
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white; /* Zorgt dat de achtergrond achter de flyer wit is */
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        /* De stijl voor beide knoppen */
-        .cta-button {
-            display: block;
-            background-color: #ffd700; /* Jouw Snoer & Scherm Geel */
-            color: #000;
-            padding: 20px;
-            text-decoration: none;
-            font-size: 1.3em;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #e6c200;
-        }
-        
-        /* Specifieke aanpassing voor de mailknop (iets andere kleur?) */
-        .mail-btn {
-            background-color: #333; /* Donkergrijs voor contrast */
-            color: #fff;
-        }
-        .mail-btn:hover {
-            background-color: #000;
-        }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-snoergrijs text-gray-800 font-sans leading-relaxed selection:bg-snoergeel selection:text-snoerzwart antialiased">
 
-    <div class="container">
-        <a href="tel:0686133563" class="cta-button">📞 Bel Maurits: 06 86133563</a>
+    <!-- Navigatie -->
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="Assets\Logo_Long.png" alt="Snoer & Scherm Logo" class="h-16 w-auto object-contain drop-shadow-sm" onerror="this.src='https://placehold.co/100x100?text=Logo'">
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#diensten" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors">Diensten</a>
+                    <a href="#werkwijze" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors">Werkwijze</a>
+                    <a href="#visie" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors">Mijn Visie</a>
+                </div>
+                <div>
+                    <a href="tel:0686133563" class="inline-flex items-center px-5 py-2.5 bg-snoerzwart text-white font-bold rounded-lg hover:bg-gray-800 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
+                        <i class="fas fa-phone-alt mr-2 text-snoergeel"></i> 06 86133563
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <img src="Voorkant.jpg" alt="Snoer en Scherm Flyer Voorkant">
-        <img src="achterkant.jpg" alt="Snoer en Scherm Flyer Achterkant">
+    <!-- Hero Sectie -->
+    <header class="bg-snoergeel relative overflow-hidden">
+        <!-- Decoratieve achtergrond elementen -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-white opacity-10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-black opacity-5 blur-2xl"></div>
 
-        <a href="mailto:maurits@snoerscherm.nl" class="cta-button mail-btn">✉️ Stuur een e-mail</a>
-    </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            <div class="w-full lg:w-1/2">
+                <div class="inline-flex items-center bg-snoerzwart text-white px-3 py-1 rounded-full text-sm font-semibold mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+                    Nu beschikbaar in regio Delfgauw
+                </div>
+                <h1 class="text-5xl lg:text-6xl font-extrabold text-snoerzwart mb-6 leading-tight tracking-tight">
+                    Apparaat stuk? <br>
+                    <span class="text-white drop-shadow-md">Ik help u graag.</span>
+                </h1>
+                <p class="text-xl text-snoerzwart mb-10 font-medium max-w-lg leading-relaxed">
+                    Ik ben Maurits van Snoer & Scherm. Ik repareer uw computer, laptop of telefoon aan huis. U krijgt eerlijk advies in begrijpelijke taal. Geen stress, gewoon een snelle oplossing.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <a href="tel:0686133563" class="bg-snoerzwart text-white text-center px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+                        Bel direct voor hulp
+                    </a>
+                    <a href="#diensten" class="bg-white text-snoerzwart text-center px-8 py-4 rounded-lg font-bold text-lg border-2 border-transparent hover:border-snoerzwart transition-all duration-200">
+                        Bekijk mijn diensten
+                    </a>
+                </div>
+                <div class="flex items-center gap-4 text-sm font-semibold text-snoerzwart opacity-80">
+                    <div class="flex items-center"><i class="fas fa-check-circle mr-1"></i> Gratis diagnose</div>
+                    <div class="flex items-center"><i class="fas fa-check-circle mr-1"></i> No-cure no-pay</div>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 relative group">
+                <div class="absolute inset-0 bg-snoerzwart rounded-2xl transform rotate-3 scale-105 opacity-10 group-hover:rotate-6 transition-transform duration-500"></div>
+                <img src="Assets/Hero_Image.png" alt="Maurits helpt met de laptop" class="relative rounded-2xl shadow-2xl w-full object-cover border-4 border-white transform group-hover:-translate-y-2 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600?text=Maurits+Portret'">
+            </div>
+        </div>
+    </header>
+
+    <!-- Waarom kiezen voor mij -->
+    <section class="py-12 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <div class="p-4">
+                    <div class="text-snoergeel text-4xl mb-4"><i class="fas fa-hourglass-half"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Rustige Uitleg</h3>
+                    <p class="text-gray-600">Ik neem de tijd voor u. Ik leg moeilijke termen simpel uit. Speciaal afgestemd op senioren.</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-snoergeel text-4xl mb-4"><i class="fas fa-home"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Hulp aan Huis</h3>
+                    <p class="text-gray-600">U hoeft niet te sjouwen met zware computers. Ik kom naar u toe in Delfgauw en omstreken.</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-snoergeel text-4xl mb-4"><i class="fas fa-handshake"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Eerlijke Prijzen</h3>
+                    <p class="text-gray-600">Vooraf helderheid over de kosten. Kan ik het niet maken? Dan betaalt u niets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diensten Sectie -->
+    <section id="diensten" class="py-20 bg-snoergrijs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Waarmee kan ik u helpen?</h2>
+                <div class="w-24 h-1.5 bg-snoergeel mx-auto rounded-full"></div>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Van een kapot scherm tot ingewikkelde softwareproblemen. Ik bied een breed scala aan oplossingen.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dienst 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
+                    <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Hardware Reparatie</h3>
+                    <p class="text-gray-600 leading-relaxed">Start uw laptop niet meer op? Is het scherm gebarsten of de oplaadpoort stuk? Ik vervang de kapotte onderdelen snel en vakkundig.</p>
+                </div>
+
+                <!-- Dienst 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
+                    <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
+                        <i class="fas fa-shield-virus text-red-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Hacks & Beveiliging</h3>
+                    <p class="text-gray-600 leading-relaxed">Bent u gehackt? Kunt u niet meer bij uw e-mail? Ik help u direct de controle terug te krijgen. Ik beveilig uw apparaten tegen toekomstige aanvallen.</p>
+                </div>
+
+                <!-- Dienst 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
+                    <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
+                        <i class="fas fa-hdd text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Bestanden Terughalen</h3>
+                    <p class="text-gray-600 leading-relaxed">Bent u belangrijke foto's of documenten kwijt? Raak niet in paniek. Ik heb de kennis en software om verloren data vaak nog succesvol te redden.</p>
+                </div>
+
+                <!-- Dienst 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
+                    <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
+                        <i class="fas fa-chalkboard-teacher text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Uitleg & Installatie</h3>
+                    <p class="text-gray-600 leading-relaxed">Heeft u een nieuwe printer, telefoon of computer gekocht? Ik installeer alles netjes voor u. Daarna leg ik u rustig uit hoe het werkt.</p>
+                </div>
+
+                <!-- Dienst 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
+                    <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
+                        <i class="fas fa-plug text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Huishoudapparaten</h3>
+                    <p class="text-gray-600 leading-relaxed">Naast computers repareer ik ook kleine elektronische huishoudapparaten. Weggooien is zonde en vaak onnodig. Ik kijk er graag naar.</p>
+                </div>
+                
+                <!-- Dienst 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50 bg-gradient-to-br from-white to-gray-50">
+                    <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
+                        <i class="fas fa-rocket text-purple-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-gray-900">Computer Opschonen</h3>
+                    <p class="text-gray-600 leading-relaxed">Is uw pc of laptop traag geworden? Ik verwijder onnodige bestanden. Ik optimaliseer de instellingen. Uw apparaat voelt weer als nieuw.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brede Context Sectie (All-knowing persona) -->
+    <section id="visie" class="py-24 bg-snoerzwart text-white relative overflow-hidden">
+        <!-- Decoratieve patronen -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FFC82C 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-snoergeel rounded-2xl transform rotate-2 opacity-20"></div>
+                    <img src="Assets\Laptop-reparatie-Delfgauw-SnoerScherm.png" alt="Laptop reparatie in de werkplaats" class="relative rounded-xl shadow-2xl border-2 border-gray-700 object-cover w-full h-auto" onerror="this.src='https://placehold.co/800x600?text=Werkplaats'">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-4xl font-extrabold mb-6 text-white leading-tight">
+                        Techniek verandert. <br>
+                        <span class="text-snoergeel">Onze aanpak blijft menselijk.</span>
+                    </h2>
+                    
+                    <div class="space-y-5 text-gray-300 text-lg">
+                        <p>
+                            Technologie speelt een hoofdrol in ons dagelijks leven. De ontwikkelingen gaan razendsnel. Sinds 2026 gelden er in Europa strengere regels rondom het 'Recht op Reparatie' (Right to Repair). Fabrikanten moeten onderdelen langer beschikbaar stellen.
+                        </p>
+                        <p>
+                            Dit is een cruciale stap vooruit. Het helpt de enorme berg elektronisch afval (e-waste) te verkleinen. Door uw kapotte apparaat te repareren, bespaart u niet alleen geld. U draagt direct bij aan een duurzamere wereld.
+                        </p>
+                        <p>
+                            Tegelijkertijd zien we nieuwe gevaren. Digitale criminaliteit neemt sterk toe. Oplichters gebruiken kunstmatige intelligentie (AI) om zeer overtuigende, valse berichten te maken. Een solide beveiliging is vandaag de dag geen luxe, maar een noodzaak.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 bg-gray-800 p-6 rounded-xl border-l-4 border-snoergeel">
+                        <h4 class="font-bold text-white text-xl mb-2">Mijn persoonlijke missie</h4>
+                        <p class="text-gray-300">
+                            Ik wil techniek toegankelijk en veilig houden voor iedereen. Ik richt mij specifiek op mensen die niet met computers zijn opgegroeid. U verdient een betrouwbaar aanspreekpunt voor al uw digitale zorgen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hoe werkt het (Stappenplan) -->
+    <section id="werkwijze" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Mijn eenvoudige werkwijze</h2>
+                <div class="w-24 h-1.5 bg-snoergeel mx-auto rounded-full"></div>
+                <p class="mt-4 text-xl text-gray-600">Geen ingewikkelde procedures. Gewoon drie heldere stappen naar een werkend apparaat.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Verbindingslijn (Desktop) -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-100 rounded-full"></div>
+
+                <div class="space-y-12">
+                    <!-- Stap 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right pr-0 md:pr-8">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">1. U neemt contact op</h3>
+                            <p class="text-gray-600 leading-relaxed">Bel mij of stuur een e-mail. Vertel me kort wat het probleem is met uw apparaat. Ik luister aandachtig en stel een paar gerichte vragen.</p>
+                        </div>
+                        <div class="relative z-10 w-16 h-16 rounded-full bg-snoergeel flex items-center justify-center font-bold text-2xl text-snoerzwart border-4 border-white shadow-xl mx-auto md:mx-0">
+                            1
+                        </div>
+                        <div class="md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0 hidden md:block">
+                            <div class="bg-gray-50 p-4 rounded-lg inline-block text-gray-500 text-sm">
+                                <i class="fas fa-info-circle mr-1"></i> U mag direct bellen naar 06 86133563.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stap 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right pr-0 md:pr-8 hidden md:block">
+                            <div class="bg-gray-50 p-4 rounded-lg inline-block text-gray-500 text-sm">
+                                <i class="fas fa-info-circle mr-1"></i> Onderzoek is altijd kosteloos en vrijblijvend.
+                            </div>
+                        </div>
+                        <div class="relative z-10 w-16 h-16 rounded-full bg-snoergeel flex items-center justify-center font-bold text-2xl text-snoerzwart border-4 border-white shadow-xl mx-auto md:mx-0">
+                            2
+                        </div>
+                        <div class="md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0 text-center md:text-left">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">2. Gratis diagnose aan huis</h3>
+                            <p class="text-gray-600 leading-relaxed">Ik onderzoek uw apparaat. Dit kan vaak comfortabel bij u thuis. Ik stel vast wat er kapot is. U krijgt direct een eerlijke, vaste prijsopgave.</p>
+                        </div>
+                    </div>
+
+                    <!-- Stap 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between">
+                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right text-center pr-0 md:pr-8">
+                            <h3 class="text-2xl font-bold mb-2 text-gray-900">3. Vakkundige reparatie</h3>
+                            <p class="text-gray-600 leading-relaxed">Na uw duidelijke akkoord ga ik direct aan de slag. Ik repareer uw apparaat zorgvuldig. U betaalt de prijs pas als alles weer perfect werkt.</p>
+                        </div>
+                        <div class="relative z-10 w-16 h-16 rounded-full bg-snoergeel flex items-center justify-center font-bold text-2xl text-snoerzwart border-4 border-white shadow-xl mx-auto md:mx-0">
+                            3
+                        </div>
+                        <div class="md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0 hidden md:block">
+                            <div class="bg-gray-50 p-4 rounded-lg inline-block text-gray-500 text-sm">
+                                <i class="fas fa-info-circle mr-1"></i> 100% No-Cure, No-Pay garantie.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veelgestelde Vragen (FAQ) -->
+    <section class="py-20 bg-snoergrijs border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Veelgestelde vragen</h2>
+                <div class="w-16 h-1 bg-snoergeel mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Vraag 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-snoergeel mr-3"></i> 
+                        Wat kost het als de computer niet gerepareerd kan worden?
+                    </h4>
+                    <p class="text-gray-600 pl-8">Helemaal niets. Ik werk met een strikt no-cure no-pay beleid. Kan ik het probleem niet oplossen? Dan bent u mij ook geen kosten verschuldigd. Zo loopt u geen enkel risico.</p>
+                </div>
+
+                <!-- Vraag 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-snoergeel mr-3"></i> 
+                        Moet ik mijn computer naar u toe brengen?
+                    </h4>
+                    <p class="text-gray-600 pl-8">Dat is meestal niet nodig. Ik kom graag bij u thuis in Delfgauw en directe omgeving. Mocht het een complexe hardware reparatie zijn, dan neem ik het apparaat veilig mee naar mijn werkplaats en breng ik het hersteld weer terug.</p>
+                </div>
+
+                <!-- Vraag 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                        <i class="fas fa-question-circle text-snoergeel mr-3"></i> 
+                        Hoe snel kan ik geholpen worden bij een hack?
+                    </h4>
+                    <p class="text-gray-600 pl-8">Bij acute problemen, zoals een gehackt e-mailaccount of mogelijke oplichting, probeer ik altijd binnen 24 uur te reageren. Veiligheid en toegang tot uw gegevens hebben mijn hoogste prioriteit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="bg-gray-900 text-gray-300 py-16 border-t-8 border-snoergeel relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            
+            <!-- Bedrijfsinfo -->
+            <div>
+                <img src="Assets\1.png" alt="Snoer & Scherm Logo" class="h-30 bg-white p-2 rounded-lg mb-6 shadow-md" onerror="this.style.display='none'">
+                                <div class="flex space-x-4">
+                    <a href="https://wa.me/31686133563?text=Beste%20Snoer%20en%20Scherm,%20Ik%20heb%20een%20vraag%20over%20uw%20diensten" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-snoergeel hover:text-snoerzwart transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Snelle links -->
+            <div>
+                <h4 class="text-white font-bold text-xl mb-6 flex items-center">
+                    <span class="w-2 h-2 bg-snoergeel mr-3 rounded-full"></span> Handige Links
+                </h4>
+                <ul class="space-y-3">
+                    <li><a href="#diensten" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Mijn Diensten</a></li>
+                    <li><a href="#werkwijze" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Hoe ik werk</a></li>
+                    <li><a href="#visie" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Missie & Duurzaamheid</a></li>
+                </ul>
+            </div>
+
+            <!-- Contactgegevens -->
+            <div>
+                <h4 class="text-white font-bold text-xl mb-6 flex items-center">
+                    <span class="w-2 h-2 bg-snoergeel mr-3 rounded-full"></span> Contact opnemen
+                </h4>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-user text-snoergeel w-6 mt-1"></i> 
+                        <span>Maurits Oldenburg</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-phone text-snoergeel w-6 mt-1"></i> 
+                        <a href="tel:0686133563" class="hover:text-white font-bold transition-colors text-lg">06 86133563</a>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-envelope text-snoergeel w-6 mt-1"></i> 
+                        <a href="mailto:maurits@snoerscherm.nl" class="hover:text-white transition-colors">maurits@snoerscherm.nl</a>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-snoergeel w-6 mt-1"></i> 
+                        <span>Delfgauw en omstreken<br><span class="text-sm text-gray-500">Zuid-Holland</span></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright & KVK -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-500">
+                &copy; 2026 Snoer & Scherm. Alle rechten voorbehouden.
+            </p>
+            <p class="text-sm text-gray-500 mt-2 md:mt-0">
+                KVK: 93720018
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
-
