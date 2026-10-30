@@ -1,0 +1,48 @@
+{% extends "dienst.html" %}
+{% set h1 = "Werkwijze en kosten" %}
+{% set wa_tekst = "Hallo Maurits, ik heb een vraag over de kosten van een reparatie." %}
+{% set verder = ["inleverpunt-station-delft.html", "veelgestelde-vragen.html", "computerhulp-aan-huis-delft.html"] %}
+
+{% block intro %}U weet wat een reparatie kost voordat ik eraan begin. Hieronder staat hoe het gaat, van uw eerste appje tot de garantie achteraf.{% endblock %}
+
+{% block tekst %}
+<h2>Zo gaat een reparatie</h2>
+<ol class="stappen stappen--verticaal">
+  <li class="stap">
+    <h3>Contact</h3>
+    <p>App, bel of mail. Vertel wat er mis is en stuur als het kan een foto. Soms kan ik dan al zeggen wat het waarschijnlijk is.</p>
+  </li>
+  <li class="stap">
+    <h3>Afspraak</h3>
+    <p>We spreken af of ik bij u langskom, of dat u het apparaat inlevert naast station Delft.</p>
+  </li>
+  <li class="stap">
+    <h3>Gratis onderzoek</h3>
+    <p>Ik zoek uit wat er kapot is. Dat onderzoek is gratis en vrijblijvend. Daarna krijgt u een vaste prijs voor de reparatie, inclusief eventuele onderdelen.</p>
+  </li>
+  <li class="stap">
+    <h3>Reparatie</h3>
+    <p>Gaat u akkoord, dan zetten we de opdracht op een opdrachtbon en ga ik aan de slag. Moet er een onderdeel besteld worden, dan hoort u hoe lang dat duurt.</p>
+  </li>
+  <li class="stap">
+    <h3>Betalen en garantie</h3>
+    <p>U krijgt een factuur en betaalt achteraf. Op mijn werk zit 3 maanden garantie.</p>
+  </li>
+</ol>
+
+<h2>Wat kost een reparatie?</h2>
+<p>Dat hangt af van het apparaat en van wat er kapot is. Daarom noem ik pas een prijs na het onderzoek, en die prijs staat dan vast.</p>
+<p>Ik val onder de kleineondernemersregeling en reken daarom geen btw. De prijs die ik noem, is het bedrag dat u betaalt.</p>
+
+<h2>En als het niet te repareren is?</h2>
+<p>Dan betaalt u niets voor het onderzoek. U weet dan wel wat er mis is. Loont repareren niet meer, bijvoorbeeld omdat het onderdeel duurder is dan een nieuw apparaat, dan zeg ik dat ook.</p>
+
+<h2>Betalen</h2>
+<p>Na de reparatie stuur ik een factuur per e-mail of WhatsApp, samen met een betaalverzoek. Daarmee betaalt u via Revolut, ING, Google Pay of creditcard. Contant betalen bij het terugbrengen kan ook. De betaaltermijn is 14 dagen.</p>
+
+<h2>Garantie</h2>
+<p>Op het werk dat ik doe zit 3 maanden garantie, gerekend vanaf de dag van de reparatie. De datum tot wanneer de garantie loopt, staat op uw factuur. Voor onderdelen die ik plaats, geldt de garantie van de leverancier.</p>
+
+<h2>Wat ik niet repareer</h2>
+<p>Telefoons, magnetrons en reparaties waarbij gesoldeerd moet worden, zoals een kapotte laadpoort of de joystick van een PlayStation- of Xbox-controller. Bij twijfel kunt u altijd een foto sturen.</p>
+{% endblock %}

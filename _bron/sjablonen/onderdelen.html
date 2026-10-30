@@ -1,0 +1,54 @@
+{# Herbruikbare stukjes. Importeer met: {% import "onderdelen.html" as o %} #}
+
+{% macro icoon(naam, klasse="ico") -%}
+<svg class="{{ klasse }}" aria-hidden="true" focusable="false"><use href="#i-{{ naam }}"></use></svg>
+{%- endmacro %}
+
+{% macro knop_app(tekst="App mij", bericht="Hallo Maurits, ik heb een vraag.", klasse="knop knop--zwart") -%}
+<a class="{{ klasse }}" href="{{ wa(bericht) }}" rel="noopener">{{ icoon("whatsapp") }}<span>{{ tekst }}</span></a>
+{%- endmacro %}
+
+{% macro knop_bel(tekst="Bel " ~ site.tel, klasse="knop knop--rand") -%}
+<a class="{{ klasse }}" href="{{ site.tel_link }}">{{ icoon("telefoon") }}<span>{{ tekst }}</span></a>
+{%- endmacro %}
+
+{% macro label(titel="Mijn afspraken met u", kop="p") -%}
+<div class="label">
+  <{{ kop }} class="label__titel">{{ titel }}</{{ kop }}>
+  <dl>
+    <div class="label__rij"><dt>Onderzoek</dt><dd>Gratis en vrijblijvend</dd></div>
+    <div class="label__rij"><dt>Prijs</dt><dd>Vast, voordat ik begin</dd></div>
+    <div class="label__rij"><dt>Betalen</dt><dd>Na de reparatie</dd></div>
+    <div class="label__rij"><dt>Garantie</dt><dd>3 maanden op het werk</dd></div>
+  </dl>
+</div>
+{%- endmacro %}
+
+{% macro rij(d, pad="", kop="span") -%}
+<li><a class="rij{% if d.get("spoed") %} rij--spoed{% endif %}" href="{{ pad }}{{ d.url }}">
+  <{{ kop }} class="rij__naam">{{ d.naam }}</{{ kop }}>
+  <span class="rij__info">{{ d.info }}</span>
+  {{ icoon("pijl") }}
+</a></li>
+{%- endmacro %}
+
+{% macro rijen(urls, pad="") -%}
+<ul class="rijen" role="list">
+{% for u in urls %}
+  {{ rij(dienst[u], pad) }}
+{% endfor %}
+</ul>
+{%- endmacro %}
+
+{% macro vraag(v, open=false) -%}
+<details class="vraag"{% if open %} open{% endif %}>
+  <summary><span>{{ v }}</span><span class="vraag__plus" aria-hidden="true"></span></summary>
+  <div class="vraag__antwoord">{{ caller() }}</div>
+</details>
+{%- endmacro %}
+
+{% macro foto(naam, breedtes, alt, sizes, br, ho, laden="lazy", prio=false) -%}
+<img src="{{ pagina.pad }}img/{{ naam }}-{{ breedtes[-1] }}.webp"
+     srcset="{% for b in breedtes %}{{ pagina.pad }}img/{{ naam }}-{{ b }}.webp {{ b }}w{% if not loop.last %}, {% endif %}{% endfor %}"
+     sizes="{{ sizes }}" width="{{ br }}" height="{{ ho }}" alt="{{ alt }}"{% if laden == "lazy" %} loading="lazy"{% endif %} decoding="async"{% if prio %} fetchpriority="high"{% endif %}>
+{%- endmacro %}

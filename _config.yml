@@ -1,0 +1,7 @@
+# GitHub Pages publiceert de site met Jekyll. Deze bestanden horen niet online.
+# Mappen die met _ beginnen (zoals _bron) worden sowieso niet gepubliceerd.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - "index copy.html"
+  - "Assets/Module mismatch analyse.xlsx"

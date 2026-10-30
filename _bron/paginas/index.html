@@ -1,0 +1,156 @@
+{% extends "basis.html" %}
+{% set h1 = "Apparaat stuk?" %}
+{% block inhoud %}
+<section class="hero" aria-labelledby="hero-kop">
+  <div class="wrap hero__grid">
+    <div>
+      <h1 id="hero-kop">Apparaat stuk? <span class="hero__ondertitel">Computerhulp en reparatie aan huis in Delft en omstreken</span></h1>
+      <p class="hero__tekst">Ik ben Maurits van Snoer &amp; Scherm. Ik help met computers en laptops, en ik repareer koffiemachines, stofzuigers, audio en ander elektrisch apparaat. Meestal bij u thuis in {{ site.plaatsen_tekst }}. Werkt of studeert u in Delft, dan kunt u uw apparaat ook op afspraak inleveren naast het station.</p>
+      <div class="knoppen">
+        {{ o.knop_app("App mij") }}
+        {{ o.knop_bel() }}
+      </div>
+      <p class="hero__bereik">{{ o.icoon("klok") }}Bereikbaar van {{ site.uren }}, ook in het weekend</p>
+    </div>
+
+    <figure class="lijst" style="margin:0">
+      <div class="lijst__foto">
+        {{ o.foto("maurits-werkplek", [560, 840, 1200], "Maurits Oldenburg van Snoer & Scherm aan zijn werkplek met een laptop", "(min-width: 74rem) 33rem, (min-width: 58rem) 45vw, 92vw", 1200, 896, "eager", true) }}
+      </div>
+      <div class="hanger">
+        <svg class="hanger__knoop" viewBox="0 0 30 34" aria-hidden="true"><path pathLength="1" d="M15 33 C 3 30, 2 9, 15 7 C 28 9, 27 30, 15 33"/></svg>
+        <span class="hanger__snoer" aria-hidden="true"></span>
+        {{ o.label() }}
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="sectie sectie--papier" id="diensten" aria-labelledby="diensten-kop">
+  <div class="wrap">
+    <div class="sectie__kop">
+      <h2 id="diensten-kop">Waar kan ik mee helpen?</h2>
+      <p>Kies uw apparaat. Op elke pagina staan de klachten die ik het vaakst tegenkom, met wat er meestal achter zit.</p>
+    </div>
+    <div class="bord">
+      {% for groep in ["computers", "apparaten"] %}
+      <div class="bord__groep">
+        <h3>{{ groep_naam[groep] }}</h3>
+        <ul class="rijen" role="list">
+          {% for d in diensten if d.groep == groep %}
+          {{ o.rij(d) }}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="bord__voet">
+      <p>Staat uw apparaat er niet bij? Stuur een foto via WhatsApp, dan hoort u of ik het kan maken. Telefoons, magnetrons en soldeerwerk doe ik niet.</p>
+      <a class="tekstlink" href="{{ wa('Hallo Maurits, ik stuur een foto van mijn apparaat. Kunt u dit repareren?') }}" rel="noopener">App een foto {{ o.icoon("pijl") }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="sectie" id="werkwijze" aria-labelledby="werkwijze-kop">
+  <div class="wrap">
+    <div class="sectie__kop">
+      <h2 id="werkwijze-kop">Zo gaat het in zijn werk</h2>
+      <p>U weet wat een reparatie kost voordat ik eraan begin.</p>
+    </div>
+    <ol class="stappen">
+      <li class="stap">
+        <h3>U appt of belt</h3>
+        <p>Vertel kort wat er mis is. Een foto van het apparaat of van de foutmelding scheelt vaak een hoop vragen.</p>
+      </li>
+      <li class="stap">
+        <h3>Ik zoek uit wat er kapot is</h3>
+        <p>Bij u thuis of nadat u het hebt ingeleverd. Dat onderzoek is gratis. Daarna noem ik een vaste prijs en beslist u of ik het repareer.</p>
+      </li>
+      <li class="stap">
+        <h3>Reparatie, betalen, garantie</h3>
+        <p>Na uw akkoord repareer ik het apparaat. U betaalt achteraf met een betaalverzoek of contant, en op mijn werk zit 3 maanden garantie.</p>
+      </li>
+    </ol>
+    <p class="meer"><a class="tekstlink" href="werkwijze-en-kosten.html">Alles over werkwijze en kosten {{ o.icoon("pijl") }}</a></p>
+  </div>
+</section>
+
+<section class="sectie sectie--papier" aria-labelledby="manieren-kop">
+  <div class="wrap">
+    <div class="sectie__kop">
+      <h2 id="manieren-kop">Bij u thuis of bij het station</h2>
+      <p>Kies wat voor u het makkelijkst is.</p>
+    </div>
+    <div class="manieren">
+      <article class="manier">
+        <div class="manier__foto">
+          {{ o.foto("maurits-aan-huis", [560, 824], "Maurits helpt met een laptop in een woonkamer", "(min-width: 74rem) 35rem, (min-width: 56rem) 46vw, 92vw", 824, 618) }}
+        </div>
+        <div class="manier__inhoud">
+          <span class="badge">{{ o.icoon("pin") }}{{ site.plaatsen_tekst }}</span>
+          <h3>Ik kom bij u thuis</h3>
+          <p>Handig voor computerhulp en voor apparaten die u liever niet versjouwt, zoals een afzuigkap of een volautomaat. Ik werk aan uw eigen tafel en leg uit wat ik doe.</p>
+          <a class="tekstlink" href="computerhulp-aan-huis-delft.html">Computerhulp aan huis {{ o.icoon("pijl") }}</a>
+        </div>
+      </article>
+      <article class="manier manier--zwart op-zwart">
+        <div class="manier__inhoud">
+          <span class="badge">{{ o.icoon("trein") }}Alleen op afspraak</span>
+          <h3>Inleveren naast station Delft</h3>
+          <p>Voor studenten en iedereen die in het centrum werkt. Er is geen balie en geen inloop, dus zonder afspraak kunt u er niets afgeven.</p>
+          <ol class="mini-stappen">
+            <li>U appt voor een afspraak.</li>
+            <li>We zien elkaar op het afgesproken tijdstip en u geeft het apparaat af.</li>
+            <li>U hoort wat er kapot is en wat het kost, voordat ik begin.</li>
+          </ol>
+          <address class="manier__adres">
+            <strong>{{ site.inleverpunt.naam }}</strong>
+            <span>{{ site.inleverpunt.straat }}, {{ site.inleverpunt.postcode }} {{ site.inleverpunt.plaats }}</span>
+          </address>
+          <a class="tekstlink" href="inleverpunt-station-delft.html">Zo werkt het inleverpunt {{ o.icoon("pijl") }}</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sectie" aria-labelledby="over-kop">
+  <div class="wrap over">
+    <div class="over__foto">
+      {{ o.foto("maurits-portret", [400, 720], "Portret van Maurits Oldenburg", "17rem", 720, 720) }}
+    </div>
+    <div class="over__tekst">
+      <h2 id="over-kop">Ik ben Maurits</h2>
+      <p class="lead">Snoer &amp; Scherm is mijn eigen bedrijf. U appt met mij, ik kom langs en ik doe zelf de reparatie.</p>
+      <p>Ik leg uit wat er kapot is zonder vaktaal, en ik zeg het eerlijk als repareren niet meer loont. Een apparaat dat weer werkt, scheelt u een nieuwe aankoop en hoeft niet bij het afval.</p>
+      <p><a class="tekstlink" href="over-mij.html">Meer over mij {{ o.icoon("pijl") }}</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sectie sectie--papier" aria-labelledby="vragen-kop">
+  <div class="wrap wrap--smal">
+    <div class="sectie__kop">
+      <h2 id="vragen-kop">Veelgestelde vragen</h2>
+    </div>
+    <div class="vragen">
+      {% call o.vraag("Wat kost een reparatie?") %}
+      <p>Dat hangt af van het apparaat en van wat er kapot is. Na het gratis onderzoek noem ik een vaste prijs, en pas als u daarmee akkoord gaat, begin ik. Er komt geen btw bij, want ik val onder de kleineondernemersregeling.</p>
+      {% endcall %}
+      {% call o.vraag("Wat als mijn apparaat niet te repareren is?") %}
+      <p>Dan betaalt u niets voor het onderzoek. U weet wel wat er mis is, en ik zeg eerlijk of een nieuw apparaat verstandiger is.</p>
+      {% endcall %}
+      {% call o.vraag("Welke reparaties doet u niet?") %}
+      <p>Telefoons, magnetrons en reparaties waarbij gesoldeerd moet worden, zoals een kapotte laadpoort of de joystick van een PlayStation- of Xbox-controller. Bij twijfel kunt u een foto sturen via WhatsApp.</p>
+      {% endcall %}
+      {% call o.vraag("Hoe snel kunt u helpen?") %}
+      <p>Dat hangt af van mijn agenda en het apparaat. Bij een gehackt account probeer ik binnen 24 uur te reageren, en water over een laptop gaat altijd voor. Ik ben bereikbaar van {{ site.uren }}.</p>
+      {% endcall %}
+      {% call o.vraag("Krijg ik garantie?") %}
+      <p>Ja. Op mijn werk zit 3 maanden garantie, gerekend vanaf de dag van de reparatie. Voor onderdelen die ik plaats, geldt de garantie van de leverancier.</p>
+      {% endcall %}
+    </div>
+    <p class="meer"><a class="tekstlink" href="veelgestelde-vragen.html">Alle vragen en antwoorden {{ o.icoon("pijl") }}</a></p>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "dienst.html" %}
+{% set h1 = "Computerhulp voor senioren in Delft" %}
+{% set kort = "Computerhulp voor senioren" %}
+{% set wa_tekst = "Hallo Maurits, ik zou graag hulp willen met mijn computer." %}
+{% set foto = {"naam": "maurits-aan-huis", "breedtes": [560, 824], "alt": "Maurits met een laptop op de bank in een woonkamer", "br": 824, "ho": 618} %}
+{% set verder = ["computerhulp-aan-huis-delft.html", "werkwijze-en-kosten.html", "veelgestelde-vragen.html"] %}
+
+{% block intro %}Ik kom bij u thuis, kijk mee aan uw eigen tafel en leg in gewone woorden uit wat ik doe. Wilt u dat een zoon, dochter of buurvrouw erbij is, of maakt uw familie de afspraak voor u? Dat is prima.{% endblock %}
+
+{% block tekst %}
+<h2>Waarmee ik vaak help</h2>
+<ul>
+  <li>E-mail die niet meer binnenkomt of niet meer verstuurd wordt.</li>
+  <li>Foto's van uw telefoon of camera op de computer zetten en bewaren.</li>
+  <li>Een printer die niet meer print of de verbinding kwijt is.</li>
+  <li>Updates die blijven hangen, of een computer die steeds trager wordt.</li>
+  <li>Wachtwoorden die u kwijt bent.</li>
+  <li>Een nieuwe computer of laptop klaarzetten, met alles van de oude erop.</li>
+</ul>
+
+<h2>Ik kreeg een verdacht bericht of telefoontje</h2>
+<p>Oplichters doen zich voor als uw bank, de Belastingdienst, een pakketdienst of een kleinkind met een nieuw nummer. Een paar vaste regels houden u buiten schot:</p>
+<ul>
+  <li>Uw bank vraagt nooit om uw pincode of inlogcodes, en vraagt u nooit om uw pas op te sturen.</li>
+  <li>Klik niet op een link in een bericht dat haast maakt. Ga zelf naar de website, of bel het nummer dat op uw bankpas staat.</li>
+  <li>Vraagt een familielid via een nieuw nummer om geld? Bel dan eerst het oude, bekende nummer.</li>
+  <li>Laat nooit iemand die u zelf belt op afstand op uw computer meekijken.</li>
+</ul>
+<div class="kader kader--geel">
+  <h3>Heeft u al op een link geklikt of iemand toegang gegeven?</h3>
+  <p>Bel dan eerst uw bank, via het nummer op uw bankpas. Daarna kijk ik uw computer en uw accounts na.</p>
+</div>
+
+<h2>Wachtwoorden die u terugvindt</h2>
+<p>Ik help u met wachtwoorden die u kunt onthouden, en zet tweestapsverificatie aan waar dat verstandig is. We spreken samen af waar u ze veilig bewaart, zodat u niet bij elke nieuwe inlog vastloopt.</p>
+
+<h2>In uw tempo</h2>
+<p>Ik werk met uw eigen computer, zodat u ziet wat ik doe. Wilt u iets zelf leren, zoals foto's versturen of videobellen met de kleinkinderen, dan oefenen we samen tot het lukt. Over de kosten maken we vooraf een afspraak, en contant betalen kan.</p>
+{% endblock %}

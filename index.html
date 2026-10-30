@@ -1,603 +1,512 @@
-<!DOCTYPE html>
-<html lang="nl" class="scroll-smooth">
+<!doctype html>
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computerhulp en reparatie aan huis in Delft | Snoer & Scherm</title>
-    <meta name="description" content="Snoer & Scherm repareert computers, laptops en elektrische apparaten aan huis in Delft, Delfgauw, Pijnacker, Nootdorp en Rijswijk. Van een gehackte laptop tot een kapotte koffiemachine, stofzuiger of afzuigkap. Gratis diagnose, no-cure no-pay.">
-    <meta name="keywords" content="computerreparatie Delft, laptop reparatie Delft, huishoudapparaten repareren, koffiemachine reparatie, stofzuiger reparatie, afzuigkap reparatie, elektronica reparatie aan huis, computerhulp Delfgauw Pijnacker Nootdorp Rijswijk">
-    <link rel="canonical" href="https://snoerscherm.nl/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Computerhulp en reparatie aan huis in Delft | Snoer & Scherm">
-    <meta property="og:description" content="Ik repareer computers, laptops en elektrische apparaten aan huis in Delft en omstreken. Gratis diagnose, no-cure no-pay.">
-    <meta property="og:image" content="https://snoerscherm.nl/Assets/Hero_Image.png">
-    <meta property="og:url" content="https://snoerscherm.nl/">
-    <meta property="og:locale" content="nl_NL">
-    <meta name="twitter:card" content="summary_large_image">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Computerhulp en reparatie aan huis in Delft | Snoer &amp; Scherm</title>
+<meta name="description" content="Computerhulp en reparatie van koffiemachines, stofzuigers en audio, aan huis in Delft, Delfgauw, Pijnacker, Nootdorp en Rijswijk. Onderzoek gratis, prijs vooraf.">
+<link rel="canonical" href="https://snoerscherm.nl/">
+<meta name="theme-color" content="#ffc41d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Snoer &amp; Scherm">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Computerhulp en reparatie aan huis in Delft | Snoer &amp; Scherm">
+<meta property="og:description" content="Computerhulp en reparatie van koffiemachines, stofzuigers en audio, aan huis in Delft, Delfgauw, Pijnacker, Nootdorp en Rijswijk. Onderzoek gratis, prijs vooraf.">
+<meta property="og:url" content="https://snoerscherm.nl/">
+<meta property="og:image" content="https://snoerscherm.nl/img/snoer-en-scherm-delen.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Maurits Oldenburg van Snoer &amp; Scherm aan zijn werkplek">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="img/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/league-spartan-variabel.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-variabel.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="js/site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "LocalBusiness",
+   "@id": "https://snoerscherm.nl/#bedrijf",
+   "name": "Snoer & Scherm",
+   "url": "https://snoerscherm.nl/",
+   "telephone": "+31152001202",
+   "email": "maurits@snoerscherm.nl",
+   "image": "https://snoerscherm.nl/img/snoer-en-scherm-delen.jpg",
+   "logo": "https://snoerscherm.nl/img/icoon-192.png",
+   "description": "Computerhulp en reparatie van elektrische apparaten, aan huis in Delft en omstreken.",
+   "founder": {
+    "@type": "Person",
+    "@id": "https://snoerscherm.nl/over-mij.html#maurits",
+    "name": "Maurits Oldenburg"
+   },
+   "areaServed": [
     {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Snoer & Scherm",
-        "image": "https://snoerscherm.nl/Assets/Hero_Image.png",
-        "url": "https://snoerscherm.nl/",
-        "telephone": "+31152001202",
-        "email": "maurits@snoerscherm.nl",
-        "sameAs": [
-            "https://maps.app.goo.gl/x6gsZct3UxF71vwT9?g_st=ac"
-        ],
-        "identifier": {
-            "@type": "PropertyValue",
-            "name": "KVK",
-            "value": "96720018"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Maurits Oldenburg"
-        },
-        "areaServed": [
-            { "@type": "City", "name": "Delft" },
-            { "@type": "City", "name": "Delfgauw" },
-            { "@type": "City", "name": "Pijnacker" },
-            { "@type": "City", "name": "Nootdorp" },
-            { "@type": "City", "name": "Rijswijk" }
-        ],
-        "makesOffer": [
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Computerreparatie (software en hardware)"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Reparatie van elektrische apparaten (o.a. koffiemachines, stofzuigers, keukenapparatuur en audio)"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Hulp bij hacks en digitale beveiliging"
-                }
-            },
-            {
-                "@type": "Offer",
-                "itemOffered": {
-                    "@type": "Service",
-                    "name": "Data- en bestandsherstel"
-                }
-            }
-        ]
+     "@type": "City",
+     "name": "Delft"
+    },
+    {
+     "@type": "City",
+     "name": "Delfgauw"
+    },
+    {
+     "@type": "City",
+     "name": "Pijnacker"
+    },
+    {
+     "@type": "City",
+     "name": "Nootdorp"
+    },
+    {
+     "@type": "City",
+     "name": "Rijswijk"
     }
-    </script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        snoergeel: '#FFC82C',
-                        snoerzwart: '#1A1A1A',
-                        snoergrijs: '#F8F9FA',
-                    },
-                    boxShadow: {
-                        'zacht': '0 10px 40px -10px rgba(0,0,0,0.08)',
-                    }
-                }
-            }
-        }
-    </script>
+   ],
+   "sameAs": [
+    "https://maps.app.goo.gl/x6gsZct3UxF71vwT9?g_st=ac"
+   ],
+   "identifier": {
+    "@type": "PropertyValue",
+    "name": "KvK",
+    "value": "96720018"
+   },
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "10:00",
+     "closes": "22:00"
+    }
+   ],
+   "paymentAccepted": "Contant, creditcard, Revolut, ING, Google Pay",
+   "currenciesAccepted": "EUR",
+   "knowsLanguage": "nl"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://snoerscherm.nl/#site",
+   "url": "https://snoerscherm.nl/",
+   "name": "Snoer & Scherm",
+   "inLanguage": "nl-NL",
+   "publisher": {
+    "@id": "https://snoerscherm.nl/#bedrijf"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://snoerscherm.nl/#pagina",
+   "url": "https://snoerscherm.nl/",
+   "name": "Computerhulp en reparatie aan huis in Delft | Snoer & Scherm",
+   "description": "Computerhulp en reparatie van koffiemachines, stofzuigers en audio, aan huis in Delft, Delfgauw, Pijnacker, Nootdorp en Rijswijk. Onderzoek gratis, prijs vooraf.",
+   "inLanguage": "nl-NL",
+   "isPartOf": {
+    "@id": "https://snoerscherm.nl/#site"
+   }
+  }
+ ]
+}
+</script>
 </head>
-<body class="bg-snoergrijs text-gray-800 font-sans leading-relaxed selection:bg-snoergeel selection:text-snoerzwart antialiased">
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-telefoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+  <symbol id="i-pijl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-omlaag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+  <symbol id="i-kruis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-ster" viewBox="0 0 24 24" fill="currentColor"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+  <symbol id="i-klok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-trein" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.1V7a4 4 0 0 0 8 0V3.1"/><path d="m9 15-1-1"/><path d="m15 15 1-1"/><path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z"/><path d="m8 19-2 3"/><path d="m16 19 2 3"/></symbol>
+</svg>
 
-    <!-- Navigatie -->
-    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <img src="Assets/Logo_Long.png" alt="Snoer & Scherm Logo" class="h-16 w-auto object-contain drop-shadow-sm" onerror="this.src='https://placehold.co/100x100?text=Logo'">
-                </div>
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#diensten" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors">Diensten</a>
-                    <div class="relative group">
-                        <button type="button" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors flex items-center">
-                            Reparatiegidsen <i class="fas fa-chevron-down ml-1.5 text-xs"></i>
-                        </button>
-                        <div class="absolute left-0 top-full w-64 bg-white rounded-lg shadow-zacht border border-gray-100 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                            <a href="water-over-laptop-delft.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-snoergrijs hover:text-snoerzwart">Water over laptop</a>
-                            <a href="koffiemachine-reparatie-delft.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-snoergrijs hover:text-snoerzwart">Koffiemachine reparatie</a>
-                            <a href="stofzuiger-reparatie-delft.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-snoergrijs hover:text-snoerzwart">Stofzuiger reparatie</a>
-                            <a href="platenspeler-audio-reparatie-delft.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-snoergrijs hover:text-snoerzwart">Platenspeler & audio</a>
-                            <a href="feest-av-apparatuur-reparatie-delft.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-snoergrijs hover:text-snoerzwart">Feest- & AV-apparatuur</a>
-                            <a href="huishoudelijke-apparaten-reparatie-delft.html" class="block px-4 py-2 text-sm text-gray-600 hover:bg-snoergrijs hover:text-snoerzwart">Huishoudelijke apparaten</a>
-                        </div>
-                    </div>
-                    <a href="#werkwijze" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors">Werkwijze</a>
-                    <a href="#inleverpunt" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors">Inleverpunt</a>
-                    <a href="#visie" class="text-gray-600 hover:text-snoerzwart font-semibold transition-colors">Mijn Visie</a>
-                </div>
-                <div>
-                    <a href="tel:0152001202" class="inline-flex items-center px-5 py-2.5 bg-snoerzwart text-white font-bold rounded-lg hover:bg-gray-800 hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200">
-                        <i class="fas fa-phone-alt mr-2 text-snoergeel"></i> 015-2001202
-                    </a>
-                </div>
+<a class="overslaan" href="#inhoud">Naar de inhoud</a>
+
+<header class="site-kop">
+  <div class="wrap site-kop__binnen">
+    <a class="logo" href="./" aria-label="Snoer &amp; Scherm, naar de homepagina">
+      <img src="img/logo-snoer-en-scherm.png" width="661" height="96" alt="Snoer &amp; Scherm">
+    </a>
+    <nav class="hoofdnav" aria-label="Hoofdmenu">
+      <ul class="hoofdnav__lijst">
+        <li class="heeft-menu">
+          <button class="hoofdnav__link" type="button" aria-expanded="false" aria-controls="dienstenmenu">Diensten <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-omlaag"></use></svg></button>
+          <div class="menu" id="dienstenmenu">
+            <div class="menu__paneel">
+              <div class="menu__groep">
+                <h2>Computers en laptops</h2>
+                <ul>
+                  <li><a href="computerhulp-aan-huis-delft.html">Computerhulp aan huis</a></li>
+                  <li><a href="water-over-laptop-delft.html">Water over uw laptop</a></li>
+                  <li><a href="computerhulp-senioren-delft.html">Computerhulp voor senioren</a></li>
+                </ul>
+              </div>
+              <div class="menu__groep">
+                <h2>Elektrische apparaten</h2>
+                <ul>
+                  <li><a href="koffiemachine-reparatie-delft.html">Koffiemachines</a></li>
+                  <li><a href="stofzuiger-reparatie-delft.html">Stofzuigers</a></li>
+                  <li><a href="huishoudelijke-apparaten-reparatie-delft.html">Huishouden en gereedschap</a></li>
+                  <li><a href="platenspeler-audio-reparatie-delft.html">Platenspeler en audio</a></li>
+                  <li><a href="feest-av-apparatuur-reparatie-delft.html">Feest- en AV-apparatuur</a></li>
+                  <li><a href="kleine-elektronica-reparatie-delft.html">Kleine elektronica</a></li>
+                </ul>
+              </div>
             </div>
-        </div>
+          </div>
+        </li>
+        <li><a class="hoofdnav__link" href="werkwijze-en-kosten.html">Werkwijze en kosten</a></li>
+        <li><a class="hoofdnav__link" href="inleverpunt-station-delft.html">Inleverpunt</a></li>
+        <li><a class="hoofdnav__link" href="over-mij.html">Over mij</a></li>
+        <li><a class="hoofdnav__link" href="veelgestelde-vragen.html">Vragen</a></li>
+      </ul>
     </nav>
+    <div class="kop-acties">
+      <a class="kop-tel" href="tel:+31152001202"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-telefoon"></use></svg>015-2001202</a>
+      <a class="knop knop--zwart kop-app" href="https://wa.me/31152001202?text=Hallo%20Maurits%2C%20ik%20heb%20een%20vraag." rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg><span>App mij</span></a>
+      <a class="icoonknop kop-bel-mobiel" href="tel:+31152001202" aria-label="Bel 015-2001202"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-telefoon"></use></svg></a>
+      <button class="icoonknop menuknop" type="button" aria-expanded="false" aria-controls="mobielmenu" aria-label="Menu openen">
+        <svg class="ico ico-open" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg><svg class="ico ico-dicht" aria-hidden="true" focusable="false"><use href="#i-kruis"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <!-- Hero Sectie -->
-    <header class="bg-snoergeel relative overflow-hidden">
-        <!-- Decoratieve achtergrond elementen -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-white opacity-10 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-black opacity-5 blur-2xl"></div>
+<div class="mobielmenu" id="mobielmenu">
+  <h2>Computers en laptops</h2>
+  <ul>
+    <li><a href="computerhulp-aan-huis-delft.html">Computerhulp aan huis</a></li>
+    <li><a href="water-over-laptop-delft.html">Water over uw laptop</a></li>
+    <li><a href="computerhulp-senioren-delft.html">Computerhulp voor senioren</a></li>
+  </ul>
+  <h2>Elektrische apparaten</h2>
+  <ul>
+    <li><a href="koffiemachine-reparatie-delft.html">Koffiemachines</a></li>
+    <li><a href="stofzuiger-reparatie-delft.html">Stofzuigers</a></li>
+    <li><a href="huishoudelijke-apparaten-reparatie-delft.html">Huishouden en gereedschap</a></li>
+    <li><a href="platenspeler-audio-reparatie-delft.html">Platenspeler en audio</a></li>
+    <li><a href="feest-av-apparatuur-reparatie-delft.html">Feest- en AV-apparatuur</a></li>
+    <li><a href="kleine-elektronica-reparatie-delft.html">Kleine elektronica</a></li>
+  </ul>
+  <h2>Snoer &amp; Scherm</h2>
+  <ul>
+    <li><a href="./">Home</a></li>
+    <li><a href="werkwijze-en-kosten.html">Werkwijze en kosten</a></li>
+    <li><a href="inleverpunt-station-delft.html">Inleverpunt</a></li>
+    <li><a href="over-mij.html">Over mij</a></li>
+    <li><a href="veelgestelde-vragen.html">Veelgestelde vragen</a></li>
+  </ul>
+  <div class="knoppen">
+    <a class="knop knop--zwart" href="https://wa.me/31152001202?text=Hallo%20Maurits%2C%20ik%20heb%20een%20vraag." rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg><span>App mij</span></a>
+    <a class="knop knop--rand" href="tel:+31152001202"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-telefoon"></use></svg><span>Bel 015-2001202</span></a>
+  </div>
+</div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-16 relative z-10">
-            <div class="w-full lg:w-1/2">
-                <div class="inline-flex items-center bg-snoerzwart text-white px-3 py-1 rounded-full text-sm font-semibold mb-6 shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
-                    Nu beschikbaar in regio Delft
-                </div>
-                <h1 class="text-5xl lg:text-6xl font-extrabold text-snoerzwart mb-6 leading-tight tracking-tight">
-                    Apparaat stuk? <br>
-                    <span class="text-white drop-shadow-md">Ik help u graag.</span>
-                </h1>
-                <p class="text-xl text-snoerzwart mb-10 font-medium max-w-lg leading-relaxed">
-                    Ik ben Maurits van Snoer & Scherm. Ik repareer uw computer, laptop, koffiemachine of ander elektrisch apparaat. Aan huis in Delft en omstreken, of op afspraak in te leveren naast station Delft. Eerlijk advies in begrijpelijke taal, geen stress, gewoon een snelle oplossing.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 mb-4">
-                    <a href="https://wa.me/31152001202?text=Beste%20Snoer%20en%20Scherm,%20Ik%20heb%20een%20vraag%20over%20uw%20diensten" class="bg-snoerzwart text-white text-center px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 inline-flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp text-green-400 text-xl"></i> App mij direct
-                    </a>
-                    <a href="tel:0152001202" class="bg-white text-snoerzwart text-center px-8 py-4 rounded-lg font-bold text-lg border-2 border-snoerzwart hover:bg-gray-50 transition-all duration-200 inline-flex items-center justify-center gap-2">
-                        <i class="fas fa-phone-alt"></i> Liever bellen?
-                    </a>
-                </div>
-                <a href="#diensten" class="inline-flex items-center text-snoerzwart font-semibold hover:underline mb-6">
-                    Bekijk mijn diensten <i class="fas fa-arrow-right ml-2 text-sm"></i>
-                </a>
-                <div class="flex items-center gap-4 text-sm font-semibold text-snoerzwart opacity-80">
-                    <div class="flex items-center"><i class="fas fa-check-circle mr-1"></i> Gratis diagnose</div>
-                    <div class="flex items-center"><i class="fas fa-check-circle mr-1"></i> No-cure no-pay</div>
-                </div>
-            </div>
-            <div class="w-full lg:w-1/2 relative group">
-                <div class="absolute inset-0 bg-snoerzwart rounded-2xl transform rotate-3 scale-105 opacity-10 group-hover:rotate-6 transition-transform duration-500"></div>
-                <img src="Assets/Hero_Image.png" alt="Maurits helpt met de laptop" class="relative rounded-2xl shadow-2xl w-full object-cover border-4 border-white transform group-hover:-translate-y-2 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600?text=Maurits+Portret'">
-            </div>
+<main id="inhoud">
+<section class="hero" aria-labelledby="hero-kop">
+  <div class="wrap hero__grid">
+    <div>
+      <h1 id="hero-kop">Apparaat stuk? <span class="hero__ondertitel">Computerhulp en reparatie aan huis in Delft en omstreken</span></h1>
+      <p class="hero__tekst">Ik ben Maurits van Snoer &amp; Scherm. Ik help met computers en laptops, en ik repareer koffiemachines, stofzuigers, audio en ander elektrisch apparaat. Meestal bij u thuis in Delft, Delfgauw, Pijnacker, Nootdorp en Rijswijk. Werkt of studeert u in Delft, dan kunt u uw apparaat ook op afspraak inleveren naast het station.</p>
+      <div class="knoppen">
+        <a class="knop knop--zwart" href="https://wa.me/31152001202?text=Hallo%20Maurits%2C%20ik%20heb%20een%20vraag." rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg><span>App mij</span></a>
+        <a class="knop knop--rand" href="tel:+31152001202"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-telefoon"></use></svg><span>Bel 015-2001202</span></a>
+      </div>
+      <p class="hero__bereik"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-klok"></use></svg>Bereikbaar van 10.00 tot 22.00 uur, ook in het weekend</p>
+    </div>
+
+    <figure class="lijst" style="margin:0">
+      <div class="lijst__foto">
+        <img src="img/maurits-werkplek-1200.webp"
+     srcset="img/maurits-werkplek-560.webp 560w, img/maurits-werkplek-840.webp 840w, img/maurits-werkplek-1200.webp 1200w"
+     sizes="(min-width: 74rem) 33rem, (min-width: 58rem) 45vw, 92vw" width="1200" height="896" alt="Maurits Oldenburg van Snoer &amp; Scherm aan zijn werkplek met een laptop" decoding="async" fetchpriority="high">
+      </div>
+      <div class="hanger">
+        <svg class="hanger__knoop" viewBox="0 0 30 34" aria-hidden="true"><path pathLength="1" d="M15 33 C 3 30, 2 9, 15 7 C 28 9, 27 30, 15 33"/></svg>
+        <span class="hanger__snoer" aria-hidden="true"></span>
+        <div class="label">
+  <p class="label__titel">Mijn afspraken met u</p>
+  <dl>
+    <div class="label__rij"><dt>Onderzoek</dt><dd>Gratis en vrijblijvend</dd></div>
+    <div class="label__rij"><dt>Prijs</dt><dd>Vast, voordat ik begin</dd></div>
+    <div class="label__rij"><dt>Betalen</dt><dd>Na de reparatie</dd></div>
+    <div class="label__rij"><dt>Garantie</dt><dd>3 maanden op het werk</dd></div>
+  </dl>
+</div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="sectie sectie--papier" id="diensten" aria-labelledby="diensten-kop">
+  <div class="wrap">
+    <div class="sectie__kop">
+      <h2 id="diensten-kop">Waar kan ik mee helpen?</h2>
+      <p>Kies uw apparaat. Op elke pagina staan de klachten die ik het vaakst tegenkom, met wat er meestal achter zit.</p>
+    </div>
+    <div class="bord">
+      <div class="bord__groep">
+        <h3>Computers en laptops</h3>
+        <ul class="rijen" role="list">
+          <li><a class="rij" href="computerhulp-aan-huis-delft.html">
+  <span class="rij__naam">Computerhulp aan huis</span>
+  <span class="rij__info">Trage laptop, virus, gehackt e-mailadres of een nieuwe computer instellen</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+          <li><a class="rij rij--spoed" href="water-over-laptop-delft.html">
+  <span class="rij__naam">Water over uw laptop</span>
+  <span class="rij__info">Wat u nu meteen moet doen, en waarom haast helpt</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+          <li><a class="rij" href="computerhulp-senioren-delft.html">
+  <span class="rij__naam">Computerhulp voor senioren</span>
+  <span class="rij__info">Uitleg in gewone woorden, bij u aan tafel en in uw tempo</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+        </ul>
+      </div>
+      <div class="bord__groep">
+        <h3>Elektrische apparaten</h3>
+        <ul class="rijen" role="list">
+          <li><a class="rij" href="koffiemachine-reparatie-delft.html">
+  <span class="rij__naam">Koffiemachines</span>
+  <span class="rij__info">Senseo, Nespresso en volautomaten van De&#39;Longhi, Philips en Jura</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+          <li><a class="rij" href="stofzuiger-reparatie-delft.html">
+  <span class="rij__naam">Stofzuigers</span>
+  <span class="rij__info">Steelstofzuigers en robots zoals Roomba en Roborock</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+          <li><a class="rij" href="huishoudelijke-apparaten-reparatie-delft.html">
+  <span class="rij__naam">Huishouden en gereedschap</span>
+  <span class="rij__info">Afzuigkap, strijkijzer, waterkoker, mixer of boormachine</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+          <li><a class="rij" href="platenspeler-audio-reparatie-delft.html">
+  <span class="rij__naam">Platenspeler en audio</span>
+  <span class="rij__info">Platenspelers, versterkers en luidsprekers</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+          <li><a class="rij" href="feest-av-apparatuur-reparatie-delft.html">
+  <span class="rij__naam">Feest- en AV-apparatuur</span>
+  <span class="rij__info">Rookmachines, licht, actieve speakers en mengpanelen</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+          <li><a class="rij" href="kleine-elektronica-reparatie-delft.html">
+  <span class="rij__naam">Kleine elektronica</span>
+  <span class="rij__info">Joy-Con drift, e-readers, koptelefoons en printers</span>
+  <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg>
+</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bord__voet">
+      <p>Staat uw apparaat er niet bij? Stuur een foto via WhatsApp, dan hoort u of ik het kan maken. Telefoons, magnetrons en soldeerwerk doe ik niet.</p>
+      <a class="tekstlink" href="https://wa.me/31152001202?text=Hallo%20Maurits%2C%20ik%20stuur%20een%20foto%20van%20mijn%20apparaat.%20Kunt%20u%20dit%20repareren%3F" rel="noopener">App een foto <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sectie" id="werkwijze" aria-labelledby="werkwijze-kop">
+  <div class="wrap">
+    <div class="sectie__kop">
+      <h2 id="werkwijze-kop">Zo gaat het in zijn werk</h2>
+      <p>U weet wat een reparatie kost voordat ik eraan begin.</p>
+    </div>
+    <ol class="stappen">
+      <li class="stap">
+        <h3>U appt of belt</h3>
+        <p>Vertel kort wat er mis is. Een foto van het apparaat of van de foutmelding scheelt vaak een hoop vragen.</p>
+      </li>
+      <li class="stap">
+        <h3>Ik zoek uit wat er kapot is</h3>
+        <p>Bij u thuis of nadat u het hebt ingeleverd. Dat onderzoek is gratis. Daarna noem ik een vaste prijs en beslist u of ik het repareer.</p>
+      </li>
+      <li class="stap">
+        <h3>Reparatie, betalen, garantie</h3>
+        <p>Na uw akkoord repareer ik het apparaat. U betaalt achteraf met een betaalverzoek of contant, en op mijn werk zit 3 maanden garantie.</p>
+      </li>
+    </ol>
+    <p class="meer"><a class="tekstlink" href="werkwijze-en-kosten.html">Alles over werkwijze en kosten <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg></a></p>
+  </div>
+</section>
+
+<section class="sectie sectie--papier" aria-labelledby="manieren-kop">
+  <div class="wrap">
+    <div class="sectie__kop">
+      <h2 id="manieren-kop">Bij u thuis of bij het station</h2>
+      <p>Kies wat voor u het makkelijkst is.</p>
+    </div>
+    <div class="manieren">
+      <article class="manier">
+        <div class="manier__foto">
+          <img src="img/maurits-aan-huis-824.webp"
+     srcset="img/maurits-aan-huis-560.webp 560w, img/maurits-aan-huis-824.webp 824w"
+     sizes="(min-width: 74rem) 35rem, (min-width: 56rem) 46vw, 92vw" width="824" height="618" alt="Maurits helpt met een laptop in een woonkamer" loading="lazy" decoding="async">
         </div>
-    </header>
-
-    <!-- Waarom kiezen voor mij -->
-    <section class="py-12 bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
-                <div class="p-4">
-                    <div class="text-snoergeel text-4xl mb-4"><i class="fas fa-hourglass-half"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Rustige Uitleg</h3>
-                    <p class="text-gray-600">Ik neem de tijd voor u. Ik leg moeilijke termen simpel uit, zodat u precies weet wat er speelt.</p>
-                </div>
-                <div class="p-4">
-                    <div class="text-snoergeel text-4xl mb-4"><i class="fas fa-home"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Hulp aan Huis</h3>
-                    <p class="text-gray-600">U hoeft niet te sjouwen met zware computers. Ik kom naar u toe in Delft en omstreken, waaronder Delfgauw, Pijnacker, Nootdorp en Rijswijk.</p>
-                </div>
-                <div class="p-4">
-                    <div class="text-snoergeel text-4xl mb-4"><i class="fas fa-handshake"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Eerlijke Prijzen</h3>
-                    <p class="text-gray-600">Vooraf helderheid over de kosten. Kan ik het niet maken? Dan betaalt u niets.</p>
-                </div>
-            </div>
+        <div class="manier__inhoud">
+          <span class="badge"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pin"></use></svg>Delft, Delfgauw, Pijnacker, Nootdorp en Rijswijk</span>
+          <h3>Ik kom bij u thuis</h3>
+          <p>Handig voor computerhulp en voor apparaten die u liever niet versjouwt, zoals een afzuigkap of een volautomaat. Ik werk aan uw eigen tafel en leg uit wat ik doe.</p>
+          <a class="tekstlink" href="computerhulp-aan-huis-delft.html">Computerhulp aan huis <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg></a>
         </div>
-    </section>
-
-    <!-- Diensten Sectie -->
-    <section id="diensten" class="py-20 bg-snoergrijs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Waarmee kan ik u helpen?</h2>
-                <div class="w-24 h-1.5 bg-snoergeel mx-auto rounded-full"></div>
-                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Van een kapotte laptop tot een stuk keukenapparaat. Ik deel mijn diensten in per soort apparaat, zodat u snel vindt wat u zoekt.</p>
-            </div>
-
-            <!-- A. Computers -->
-            <div class="mb-14">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span class="w-8 h-8 rounded-full bg-snoerzwart text-snoergeel flex items-center justify-center text-sm font-bold mr-3">A</span>
-                    Computers
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Software -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-laptop-code text-red-500"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Software</h4>
-                        <p class="text-gray-600 leading-relaxed">Is uw computer traag, vol virussen, gehackt of bent u wachtwoorden kwijt? Ook voor bestanden terughalen, en de installatie en uitleg van een nieuwe computer, printer of telefoon kunt u bij mij terecht.</p>
-                    </div>
-
-                    <!-- Hardware -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-laptop-medical"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Hardware</h4>
-                        <p class="text-gray-600 leading-relaxed">Start uw laptop niet meer op, of is het scherm gebarsten? Ik vervang de kapotte onderdelen snel en vakkundig.</p>
-                    </div>
-
-                    <!-- Waterschade -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50 bg-gradient-to-br from-white to-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-droplet text-blue-500"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Waterschade aan laptops</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Water, koffie of iets anders over uw laptop gemorst? Dit is spoed: elke minuut telt. Lees direct wat u nu moet doen.</p>
-                        <a href="water-over-laptop-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Wat nu te doen <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- B. Elektrische apparaten -->
-            <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span class="w-8 h-8 rounded-full bg-snoerzwart text-snoergeel flex items-center justify-center text-sm font-bold mr-3">B</span>
-                    Elektrische apparaten
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Koffiemachines -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-mug-hot text-yellow-700"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Koffiemachines</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Senseo, Nespresso, of een volautomaat van De'Longhi, Philips of Jura die lekt, niet meer maalt of geen koffie meer geeft.</p>
-                        <a href="koffiemachine-reparatie-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Meer over koffiemachines <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-
-                    <!-- Stofzuigers -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-broom text-gray-700"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Stofzuigers</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Van robotstofzuigers zoals de Roomba of Roborock tot een steelstofzuiger die zijn zuigkracht verliest.</p>
-                        <a href="stofzuiger-reparatie-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Meer over stofzuigers <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-
-                    <!-- Keuken en huishouden -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-fan text-yellow-600"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Keuken en huishouden</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Een afzuigkap die niet meer zuigt, of een stoomstrijkijzer, waterkoker, mixer of luchtbevochtiger die ermee stopt.</p>
-                        <a href="huishoudelijke-apparaten-reparatie-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Meer over huishoudelijke apparaten <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-
-                    <!-- Audio -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-record-vinyl text-purple-500"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Audio</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Een platenspeler, luidsprekers of versterker die kraakt, hapert of stil blijft.</p>
-                        <a href="platenspeler-audio-reparatie-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Meer over audioapparatuur <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-
-                    <!-- Gereedschap -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-toolbox text-orange-600"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Gereedschap</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Een boormachine of schuurmachine die niet meer op volle kracht draait of niet meer aanslaat.</p>
-                        <a href="huishoudelijke-apparaten-reparatie-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Meer over gereedschap <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-
-                    <!-- Feest- en AV-apparatuur -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-music text-pink-500"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Feest- en AV-apparatuur</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">Rookmachines, lichteffecten, actieve speakers, mengpanelen en versterkers. Voor buurthuizen, verenigingen, cafés en dj's in Delft.</p>
-                        <a href="feest-av-apparatuur-reparatie-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Meer over feest- en AV-apparatuur <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-
-                    <!-- Kleine elektronica -->
-                    <div class="bg-white rounded-2xl p-8 shadow-zacht hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 border border-gray-50 bg-gradient-to-br from-white to-gray-50">
-                        <div class="w-16 h-16 bg-gray-50 text-snoerzwart rounded-xl flex items-center justify-center text-3xl mb-6 shadow-sm border border-gray-100">
-                            <i class="fas fa-headphones text-green-600"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-3 text-gray-900">Kleine elektronica</h4>
-                        <p class="text-gray-600 leading-relaxed mb-4">E-readers, draadloze koptelefoons en printers die het niet meer doen.</p>
-                        <a href="huishoudelijke-apparaten-reparatie-delft.html" class="inline-flex items-center font-semibold text-snoerzwart hover:text-snoergeel transition-colors">Meer over kleine elektronica <i class="fas fa-arrow-right ml-2 text-sm"></i></a>
-                    </div>
-                </div>
-            </div>
+      </article>
+      <article class="manier manier--zwart op-zwart">
+        <div class="manier__inhoud">
+          <span class="badge"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-trein"></use></svg>Alleen op afspraak</span>
+          <h3>Inleveren naast station Delft</h3>
+          <p>Voor studenten en iedereen die in het centrum werkt. Er is geen balie en geen inloop, dus zonder afspraak kunt u er niets afgeven.</p>
+          <ol class="mini-stappen">
+            <li>U appt voor een afspraak.</li>
+            <li>We zien elkaar op het afgesproken tijdstip en u geeft het apparaat af.</li>
+            <li>U hoort wat er kapot is en wat het kost, voordat ik begin.</li>
+          </ol>
+          <address class="manier__adres">
+            <strong>The Social Hub</strong>
+            <span>Van Leeuwenhoekpark 1, 2611 DW Delft</span>
+          </address>
+          <a class="tekstlink" href="inleverpunt-station-delft.html">Zo werkt het inleverpunt <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg></a>
         </div>
-    </section>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Brede Context Sectie (All-knowing persona) -->
-    <section id="visie" class="py-24 bg-snoerzwart text-white relative overflow-hidden">
-        <!-- Decoratieve patronen -->
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#FFC82C 1px, transparent 1px); background-size: 30px 30px;"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="absolute -inset-4 bg-snoergeel rounded-2xl transform rotate-2 opacity-20"></div>
-                    <img src="Assets/Laptop-reparatie-Delfgauw-SnoerScherm.png" alt="Laptop reparatie in de werkplaats" class="relative rounded-xl shadow-2xl border-2 border-gray-700 object-cover w-full h-auto" onerror="this.src='https://placehold.co/800x600?text=Werkplaats'">
-                </div>
-                <div class="w-full lg:w-1/2">
-                    <h2 class="text-4xl font-extrabold mb-6 text-white leading-tight">
-                        Techniek verandert. <br>
-                        <span class="text-snoergeel">Onze aanpak blijft menselijk.</span>
-                    </h2>
-                    
-                    <div class="space-y-5 text-gray-300 text-lg">
-                        <p>
-                            Technologie speelt een hoofdrol in ons dagelijks leven. De ontwikkelingen gaan razendsnel. Sinds 2026 gelden er in Europa strengere regels rondom het 'Recht op Reparatie' (Right to Repair). Fabrikanten moeten onderdelen langer beschikbaar stellen.
-                        </p>
-                        <p>
-                            Dit is een cruciale stap vooruit. Het helpt de enorme berg elektronisch afval (e-waste) te verkleinen. Door uw kapotte apparaat te repareren, bespaart u niet alleen geld. U draagt direct bij aan een duurzamere wereld.
-                        </p>
-                        <p>
-                            Tegelijkertijd zien we nieuwe gevaren. Digitale criminaliteit neemt sterk toe. Oplichters gebruiken kunstmatige intelligentie (AI) om zeer overtuigende, valse berichten te maken. Een solide beveiliging is vandaag de dag geen luxe, maar een noodzaak.
-                        </p>
-                    </div>
+<section class="sectie" aria-labelledby="over-kop">
+  <div class="wrap over">
+    <div class="over__foto">
+      <img src="img/maurits-portret-720.webp"
+     srcset="img/maurits-portret-400.webp 400w, img/maurits-portret-720.webp 720w"
+     sizes="17rem" width="720" height="720" alt="Portret van Maurits Oldenburg" loading="lazy" decoding="async">
+    </div>
+    <div class="over__tekst">
+      <h2 id="over-kop">Ik ben Maurits</h2>
+      <p class="lead">Snoer &amp; Scherm is mijn eigen bedrijf. U appt met mij, ik kom langs en ik doe zelf de reparatie.</p>
+      <p>Ik leg uit wat er kapot is zonder vaktaal, en ik zeg het eerlijk als repareren niet meer loont. Een apparaat dat weer werkt, scheelt u een nieuwe aankoop en hoeft niet bij het afval.</p>
+      <p><a class="tekstlink" href="over-mij.html">Meer over mij <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg></a></p>
+    </div>
+  </div>
+</section>
 
-                    <div class="mt-8 bg-gray-800 p-6 rounded-xl border-l-4 border-snoergeel">
-                        <h4 class="font-bold text-white text-xl mb-2">Mijn persoonlijke missie</h4>
-                        <p class="text-gray-300">
-                            Ik wil techniek toegankelijk en veilig houden voor iedereen. U verdient een betrouwbaar aanspreekpunt voor al uw digitale zorgen.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="sectie sectie--papier" aria-labelledby="vragen-kop">
+  <div class="wrap wrap--smal">
+    <div class="sectie__kop">
+      <h2 id="vragen-kop">Veelgestelde vragen</h2>
+    </div>
+    <div class="vragen">
+<details class="vraag">
+  <summary><span>Wat kost een reparatie?</span><span class="vraag__plus" aria-hidden="true"></span></summary>
+  <div class="vraag__antwoord">      <p>Dat hangt af van het apparaat en van wat er kapot is. Na het gratis onderzoek noem ik een vaste prijs, en pas als u daarmee akkoord gaat, begin ik. Er komt geen btw bij, want ik val onder de kleineondernemersregeling.</p>
+</div>
+</details><details class="vraag">
+  <summary><span>Wat als mijn apparaat niet te repareren is?</span><span class="vraag__plus" aria-hidden="true"></span></summary>
+  <div class="vraag__antwoord">      <p>Dan betaalt u niets voor het onderzoek. U weet wel wat er mis is, en ik zeg eerlijk of een nieuw apparaat verstandiger is.</p>
+</div>
+</details><details class="vraag">
+  <summary><span>Welke reparaties doet u niet?</span><span class="vraag__plus" aria-hidden="true"></span></summary>
+  <div class="vraag__antwoord">      <p>Telefoons, magnetrons en reparaties waarbij gesoldeerd moet worden, zoals een kapotte laadpoort of de joystick van een PlayStation- of Xbox-controller. Bij twijfel kunt u een foto sturen via WhatsApp.</p>
+</div>
+</details><details class="vraag">
+  <summary><span>Hoe snel kunt u helpen?</span><span class="vraag__plus" aria-hidden="true"></span></summary>
+  <div class="vraag__antwoord">      <p>Dat hangt af van mijn agenda en het apparaat. Bij een gehackt account probeer ik binnen 24 uur te reageren, en water over een laptop gaat altijd voor. Ik ben bereikbaar van 10.00 tot 22.00 uur.</p>
+</div>
+</details><details class="vraag">
+  <summary><span>Krijg ik garantie?</span><span class="vraag__plus" aria-hidden="true"></span></summary>
+  <div class="vraag__antwoord">      <p>Ja. Op mijn werk zit 3 maanden garantie, gerekend vanaf de dag van de reparatie. Voor onderdelen die ik plaats, geldt de garantie van de leverancier.</p>
+</div>
+</details>    </div>
+    <p class="meer"><a class="tekstlink" href="veelgestelde-vragen.html">Alle vragen en antwoorden <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pijl"></use></svg></a></p>
+  </div>
+</section>
+</main>
 
-    <!-- Hoe werkt het (Stappenplan) -->
-    <section id="werkwijze" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Mijn eenvoudige werkwijze</h2>
-                <div class="w-24 h-1.5 bg-snoergeel mx-auto rounded-full"></div>
-                <p class="mt-4 text-xl text-gray-600">Geen ingewikkelde procedures. Gewoon drie heldere stappen naar een werkend apparaat.</p>
-            </div>
+<section class="oproep op-zwart" aria-labelledby="oproep-kop">
+  <div class="wrap oproep__grid">
+    <div>
+      <h2 id="oproep-kop">Vertel me wat er kapot is</h2>
+      <p>Een kort appje met een foto is genoeg om te beginnen. Ik reageer van 10.00 tot 22.00 uur, ook in het weekend.</p>
+    </div>
+    <div class="oproep__acties">
+      <a class="knop knop--geel" href="https://wa.me/31152001202?text=Hallo%20Maurits%2C%20ik%20heb%20een%20vraag." rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg><span>App 015-2001202</span></a>
+      <a class="knop knop--wit-rand" href="tel:+31152001202"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-telefoon"></use></svg><span>Bel 015-2001202</span></a>
+      <p class="oproep__mail">Liever mailen? <a href="mailto:maurits@snoerscherm.nl">maurits@snoerscherm.nl</a></p>
+    </div>
+  </div>
+</section>
 
-            <div class="relative">
-                <!-- Verbindingslijn (Desktop) -->
-                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-100 rounded-full"></div>
+<footer class="site-voet op-zwart">
+  <div class="wrap">
+    <div class="site-voet__grid">
+      <div class="site-voet__merk">
+        <img src="img/logo-snoer-en-scherm-licht.png" width="661" height="96" alt="Snoer &amp; Scherm" loading="lazy">
+        <p>Computerhulp en reparatie aan huis in Delft en omstreken.</p>
+        <a class="site-voet__google" href="https://maps.app.goo.gl/x6gsZct3UxF71vwT9?g_st=ac" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-ster"></use></svg>Bekijk mijn Google-profiel</a>
+      </div>
+      <nav aria-label="Computers en laptops">
+        <h2>Computers en laptops</h2>
+        <ul>
+          <li><a href="computerhulp-aan-huis-delft.html">Computerhulp aan huis</a></li>
+          <li><a href="water-over-laptop-delft.html">Water over uw laptop</a></li>
+          <li><a href="computerhulp-senioren-delft.html">Computerhulp voor senioren</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Elektrische apparaten">
+        <h2>Elektrische apparaten</h2>
+        <ul>
+          <li><a href="koffiemachine-reparatie-delft.html">Koffiemachines</a></li>
+          <li><a href="stofzuiger-reparatie-delft.html">Stofzuigers</a></li>
+          <li><a href="huishoudelijke-apparaten-reparatie-delft.html">Huishouden en gereedschap</a></li>
+          <li><a href="platenspeler-audio-reparatie-delft.html">Platenspeler en audio</a></li>
+          <li><a href="feest-av-apparatuur-reparatie-delft.html">Feest- en AV-apparatuur</a></li>
+          <li><a href="kleine-elektronica-reparatie-delft.html">Kleine elektronica</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Snoer &amp; Scherm">
+        <h2>Snoer &amp; Scherm</h2>
+        <ul>
+          <li><a href="werkwijze-en-kosten.html">Werkwijze en kosten</a></li>
+          <li><a href="inleverpunt-station-delft.html">Inleverpunt</a></li>
+          <li><a href="over-mij.html">Over mij</a></li>
+          <li><a href="veelgestelde-vragen.html">Veelgestelde vragen</a></li>
+        </ul>
+      </nav>
+      <div class="site-voet__contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>Maurits Oldenburg</li>
+          <li><a href="tel:+31152001202">015-2001202</a></li>
+          <li><a href="mailto:maurits@snoerscherm.nl">maurits@snoerscherm.nl</a></li>
+          <li>Delft, Delfgauw, Pijnacker, Nootdorp en Rijswijk</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-voet__onder">
+      <span>&copy; 2026 Snoer &amp; Scherm</span>
+      <span>KvK 96720018</span>
+      <span>Geen btw (kleineondernemersregeling)</span>
+    </div>
+  </div>
+</footer>
 
-                <div class="space-y-12">
-                    <!-- Stap 1 -->
-                    <div class="relative flex flex-col md:flex-row items-center justify-between">
-                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right pr-0 md:pr-8">
-                            <h3 class="text-2xl font-bold mb-2 text-gray-900">1. U neemt contact op</h3>
-                            <p class="text-gray-600 leading-relaxed">App, bel of stuur een e-mail. Vertel me kort wat het probleem is met uw apparaat. Ik luister aandachtig en stel een paar gerichte vragen.</p>
-                        </div>
-                        <div class="relative z-10 w-16 h-16 rounded-full bg-snoergeel flex items-center justify-center font-bold text-2xl text-snoerzwart border-4 border-white shadow-xl mx-auto md:mx-0">
-                            1
-                        </div>
-                        <div class="md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0 hidden md:block">
-                            <div class="bg-gray-50 p-4 rounded-lg inline-block text-gray-500 text-sm">
-                                <i class="fab fa-whatsapp mr-1"></i> Appt het snelst: 015-2001202.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stap 2 -->
-                    <div class="relative flex flex-col md:flex-row items-center justify-between">
-                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right pr-0 md:pr-8 hidden md:block">
-                            <div class="bg-gray-50 p-4 rounded-lg inline-block text-gray-500 text-sm">
-                                <i class="fas fa-info-circle mr-1"></i> Onderzoek is altijd kosteloos en vrijblijvend.
-                            </div>
-                        </div>
-                        <div class="relative z-10 w-16 h-16 rounded-full bg-snoergeel flex items-center justify-center font-bold text-2xl text-snoerzwart border-4 border-white shadow-xl mx-auto md:mx-0">
-                            2
-                        </div>
-                        <div class="md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0 text-center md:text-left">
-                            <h3 class="text-2xl font-bold mb-2 text-gray-900">2. Gratis diagnose aan huis</h3>
-                            <p class="text-gray-600 leading-relaxed">Ik onderzoek uw apparaat. Dit kan vaak comfortabel bij u thuis. Ik stel vast wat er kapot is. U krijgt direct een eerlijke, vaste prijsopgave.</p>
-                        </div>
-                    </div>
-
-                    <!-- Stap 3 -->
-                    <div class="relative flex flex-col md:flex-row items-center justify-between">
-                        <div class="md:w-5/12 mb-6 md:mb-0 md:text-right text-center pr-0 md:pr-8">
-                            <h3 class="text-2xl font-bold mb-2 text-gray-900">3. Vakkundige reparatie</h3>
-                            <p class="text-gray-600 leading-relaxed">Na uw duidelijke akkoord ga ik direct aan de slag. Ik repareer uw apparaat zorgvuldig. U betaalt de prijs pas als alles weer perfect werkt.</p>
-                        </div>
-                        <div class="relative z-10 w-16 h-16 rounded-full bg-snoergeel flex items-center justify-center font-bold text-2xl text-snoerzwart border-4 border-white shadow-xl mx-auto md:mx-0">
-                            3
-                        </div>
-                        <div class="md:w-5/12 pl-0 md:pl-8 mt-6 md:mt-0 hidden md:block">
-                            <div class="bg-gray-50 p-4 rounded-lg inline-block text-gray-500 text-sm">
-                                <i class="fas fa-info-circle mr-1"></i> 100% No-Cure, No-Pay garantie.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Inleverpunt bij station Delft -->
-    <section id="inleverpunt" class="py-16 bg-white border-t border-gray-100">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-snoergrijs rounded-2xl p-8 lg:p-10 border border-gray-200">
-                <div class="flex flex-col lg:flex-row lg:items-start gap-8">
-                    <div class="flex-shrink-0">
-                        <div class="w-14 h-14 bg-snoerzwart text-snoergeel rounded-xl flex items-center justify-center text-2xl">
-                            <i class="fas fa-train"></i>
-                        </div>
-                    </div>
-                    <div class="flex-1">
-                        <h2 class="text-2xl lg:text-3xl font-extrabold text-gray-900 mb-3">Inleverpunt bij station Delft</h2>
-                        <p class="text-gray-700 leading-relaxed mb-4">
-                            Werkt of studeert u in het centrum van Delft? Dan hoeft u niet op mij te wachten thuis. U kunt uw apparaat inleveren bij The Social Hub, Van Leeuwenhoekpark 1, 2611 DW Delft — direct naast station Delft.
-                        </p>
-                        <div class="bg-white border-l-4 border-snoergeel rounded-lg p-4 mb-4">
-                            <p class="text-gray-900 font-semibold mb-1"><i class="fas fa-triangle-exclamation text-snoergeel mr-2"></i>Uitsluitend op afspraak</p>
-                            <p class="text-gray-600 text-sm leading-relaxed">
-                                Er is geen balie en geen inloopspreekuur. Ik kom er zelf alleen naartoe op het tijdstip dat we vooraf hebben afgesproken. Zonder afspraak kunt u daar niets afgeven.
-                            </p>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-3">
-                            <a href="https://wa.me/31152001202?text=Beste%20Snoer%20en%20Scherm,%20ik%20wil%20graag%20een%20afspraak%20maken%20bij%20het%20inleverpunt%20bij%20station%20Delft" class="inline-flex items-center justify-center px-6 py-3 bg-snoerzwart text-white font-bold rounded-lg hover:bg-gray-800 transition-colors">
-                                <i class="fab fa-whatsapp mr-2 text-green-400"></i> App voor een afspraak
-                            </a>
-                            <a href="tel:0152001202" class="inline-flex items-center justify-center px-6 py-3 bg-white text-snoerzwart font-bold rounded-lg border-2 border-snoerzwart hover:bg-gray-50 transition-colors">
-                                <i class="fas fa-phone-alt mr-2"></i> Bel voor een afspraak
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Veelgestelde Vragen (FAQ) -->
-    <section class="py-20 bg-snoergrijs border-t border-gray-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Veelgestelde vragen</h2>
-                <div class="w-16 h-1 bg-snoergeel mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="space-y-6">
-                <!-- Vraag 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
-                        <i class="fas fa-question-circle text-snoergeel mr-3"></i> 
-                        Wat kost het als de computer niet gerepareerd kan worden?
-                    </h4>
-                    <p class="text-gray-600 pl-8">Helemaal niets. Ik werk met een strikt no-cure no-pay beleid. Kan ik het probleem niet oplossen? Dan bent u mij ook geen kosten verschuldigd. Zo loopt u geen enkel risico.</p>
-                </div>
-
-                <!-- Vraag 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
-                        <i class="fas fa-question-circle text-snoergeel mr-3"></i> 
-                        Moet ik mijn computer naar u toe brengen?
-                    </h4>
-                    <p class="text-gray-600 pl-8">Dat is meestal niet nodig. Ik kom graag bij u thuis in Delft en directe omgeving, waaronder Delfgauw, Pijnacker, Nootdorp en Rijswijk. Werkt of studeert u dicht bij het centrum van Delft? Dan kunt u uw apparaat ook inleveren bij <a href="#inleverpunt" class="underline hover:text-snoerzwart">het inleverpunt naast station Delft</a>, maar uitsluitend op een vooraf afgesproken tijdstip. Er is daar geen balie en geen inloop.</p>
-                </div>
-
-                <!-- Vraag 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
-                        <i class="fas fa-question-circle text-snoergeel mr-3"></i>
-                        Hoe snel kan ik geholpen worden bij een hack?
-                    </h4>
-                    <p class="text-gray-600 pl-8">Bij acute problemen, zoals een gehackt e-mailaccount of mogelijke oplichting, probeer ik altijd binnen 24 uur te reageren. Veiligheid en toegang tot uw gegevens hebben mijn hoogste prioriteit.</p>
-                </div>
-
-                <!-- Vraag 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h4 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
-                        <i class="fas fa-question-circle text-snoergeel mr-3"></i>
-                        Welke huishoudapparaten repareert u nog meer?
-                    </h4>
-                    <p class="text-gray-600 pl-8">Meer dan u zou denken. Zo heb ik onlangs nog een rookmachine en een afzuigkap gerepareerd. Ook koffiezetapparaten, stofzuigers en andere kleine elektronica pak ik graag op. Twijfelt u of ik uw apparaat kan maken? App of bel mij gerust, dan denk ik met u mee.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer / Contact -->
-    <footer class="bg-gray-900 text-gray-300 py-16 border-t-8 border-snoergeel relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-
-            <!-- Bedrijfsinfo -->
-            <div>
-                <img src="Assets/1.png" alt="Snoer & Scherm Logo" class="h-30 bg-white p-2 rounded-lg mb-6 shadow-md" onerror="this.style.display='none'">
-                <div class="flex flex-wrap gap-3">
-                    <a href="https://wa.me/31152001202?text=Beste%20Snoer%20en%20Scherm,%20Ik%20heb%20een%20vraag%20over%20uw%20diensten" class="inline-flex items-center px-4 py-2 rounded-full bg-gray-800 text-gray-300 font-semibold hover:bg-snoergeel hover:text-snoerzwart transition-colors">
-                        <i class="fab fa-whatsapp mr-2"></i> App mij
-                    </a>
-                    <a href="https://maps.app.goo.gl/x6gsZct3UxF71vwT9?g_st=ac" class="inline-flex items-center px-4 py-2 rounded-full bg-gray-800 text-gray-300 font-semibold hover:bg-snoergeel hover:text-snoerzwart transition-colors">
-                        <i class="fab fa-google mr-2"></i> Bekijk op Google
-                    </a>
-                </div>
-            </div>
-
-            <!-- Snelle links -->
-            <div>
-                <h4 class="text-white font-bold text-xl mb-6 flex items-center">
-                    <span class="w-2 h-2 bg-snoergeel mr-3 rounded-full"></span> Handige Links
-                </h4>
-                <ul class="space-y-3">
-                    <li><a href="#diensten" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Mijn Diensten</a></li>
-                    <li><a href="#werkwijze" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Hoe ik werk</a></li>
-                    <li><a href="#inleverpunt" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Inleverpunt Delft</a></li>
-                    <li><a href="#visie" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Missie & Duurzaamheid</a></li>
-                </ul>
-            </div>
-
-            <!-- Reparatiegidsen -->
-            <div>
-                <h4 class="text-white font-bold text-xl mb-6 flex items-center">
-                    <span class="w-2 h-2 bg-snoergeel mr-3 rounded-full"></span> Reparatiegidsen
-                </h4>
-                <ul class="space-y-3">
-                    <li><a href="water-over-laptop-delft.html" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Water over laptop</a></li>
-                    <li><a href="koffiemachine-reparatie-delft.html" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Koffiemachine reparatie</a></li>
-                    <li><a href="stofzuiger-reparatie-delft.html" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Stofzuiger reparatie</a></li>
-                    <li><a href="platenspeler-audio-reparatie-delft.html" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Platenspeler & audio</a></li>
-                    <li><a href="feest-av-apparatuur-reparatie-delft.html" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Feest- & AV-apparatuur</a></li>
-                    <li><a href="huishoudelijke-apparaten-reparatie-delft.html" class="hover:text-snoergeel transition-colors"><i class="fas fa-chevron-right text-xs mr-2 opacity-50"></i> Huishoudelijke apparaten</a></li>
-                </ul>
-            </div>
-
-            <!-- Contactgegevens -->
-            <div>
-                <h4 class="text-white font-bold text-xl mb-6 flex items-center">
-                    <span class="w-2 h-2 bg-snoergeel mr-3 rounded-full"></span> Contact opnemen
-                </h4>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <i class="fas fa-user text-snoergeel w-6 mt-1"></i> 
-                        <span>Maurits Oldenburg</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-phone text-snoergeel w-6 mt-1"></i> 
-                        <a href="tel:0152001202" class="hover:text-white font-bold transition-colors text-lg">015-2001202</a>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-envelope text-snoergeel w-6 mt-1"></i> 
-                        <a href="mailto:maurits@snoerscherm.nl" class="hover:text-white transition-colors">maurits@snoerscherm.nl</a>
-                    </li>
-                    <li class="flex items-start">
-                        <i class="fas fa-map-marker-alt text-snoergeel w-6 mt-1"></i> 
-                        <span>Delft en omstreken<br><span class="text-sm text-gray-500">Delfgauw, Pijnacker, Nootdorp, Rijswijk</span></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Copyright & KVK -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm text-gray-500">
-                &copy; 2026 Snoer & Scherm. Alle rechten voorbehouden.
-            </p>
-            <p class="text-sm text-gray-500 mt-2 md:mt-0">
-                KVK: 96720018
-            </p>
-        </div>
-    </footer>
-
+<div class="plakbalk" inert>
+  <a class="knop knop--zwart" href="https://wa.me/31152001202?text=Hallo%20Maurits%2C%20ik%20heb%20een%20vraag." rel="noopener"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg><span>App mij</span></a>
+  <a class="knop knop--geel" href="tel:+31152001202"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-telefoon"></use></svg><span>Bel</span></a>
+</div>
 </body>
 </html>

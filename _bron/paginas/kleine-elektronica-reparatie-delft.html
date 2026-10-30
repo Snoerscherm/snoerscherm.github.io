@@ -1,0 +1,27 @@
+{% extends "dienst.html" %}
+{% set h1 = "Kleine elektronica reparatie in Delft" %}
+{% set kort = "Kleine elektronica" %}
+{% set wa_tekst = "Hallo Maurits, ik heb een vraag over een klein apparaat." %}
+{% set verder = ["inleverpunt-station-delft.html", "computerhulp-aan-huis-delft.html", "platenspeler-audio-reparatie-delft.html"] %}
+
+{% block intro %}Kleine apparaten zijn vaak te repareren, maar niet altijd. Hieronder staat per apparaat wat ik kan doen, en wanneer ik eerlijk nee zeg. Kleine spullen kunt u op afspraak inleveren naast station Delft.{% endblock %}
+
+{% block tekst %}
+<h2>Mijn Joy-Con stuurt vanzelf (stick drift)</h2>
+<p>Bij stick drift beweegt uw poppetje terwijl u de stick niet aanraakt. De oorzaak is slijtage in de joystick zelf. Schoonmaken helpt soms even, maar vervangen lost het echt op. In een Joy-Con zit de joystick met een kabeltje vast, er hoeft dus niet gesoldeerd te worden. Dat kan ik voor u doen.</p>
+<p>Controllers van PlayStation en Xbox repareer ik niet. Daar is de joystick op de printplaat gesoldeerd.</p>
+
+<h2>Mijn e-reader laadt niet meer op</h2>
+<p>Probeer eerst een andere kabel en een andere stekker, want daar zit het vaak in. Is de accu versleten, dan kijk ik of die bij uw model los te vervangen is. Zit het probleem in de laadpoort zelf, dan moet er gesoldeerd worden en dat doe ik niet. Dat hoort u dan meteen, en het onderzoek kost u niets.</p>
+
+<h2>Mijn draadloze koptelefoon gaat niet meer aan</h2>
+<p>Vaak is de accu op na een paar jaar dagelijks gebruik. Bij grotere koptelefoons is die soms los te vervangen. Bij kleine oordopjes meestal niet, omdat alles is verlijmd. Ik kijk wat er bij uw model kan en zeg het eerlijk als reparatie niet loont.</p>
+
+<h2>Mijn printer print strepen of helemaal niet</h2>
+<p>Strepen komen meestal door verstopte printkoppen. Een reinigingsprogramma via het menu van de printer lost dat vaak op. Print hij helemaal niet meer, dan kan het liggen aan de verbinding met de computer of het wifi-netwerk, aan de driver, of aan een defect binnenin. Ik zoek uit waar het zit.</p>
+
+<div class="kader">
+  <h3>Wat ik niet repareer</h3>
+  <p>Telefoons, laadpoorten en andere reparaties waarbij gesoldeerd moet worden. Twijfelt u, stuur dan een foto via WhatsApp.</p>
+</div>
+{% endblock %}

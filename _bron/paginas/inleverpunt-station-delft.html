@@ -1,0 +1,51 @@
+{% extends "dienst.html" %}
+{% set h1 = "Inleverpunt naast station Delft" %}
+{% set kort = "Inleverpunt station Delft" %}
+{% set wa_tekst = "Hallo Maurits, ik wil graag een afspraak maken bij het inleverpunt naast station Delft." %}
+{% set verder = ["kleine-elektronica-reparatie-delft.html", "water-over-laptop-delft.html", "werkwijze-en-kosten.html"] %}
+
+{% block intro %}Voor studenten en iedereen die in het centrum van Delft werkt. U hoeft niet thuis op mij te wachten: we spreken een tijd af bij {{ site.inleverpunt.naam }}, direct naast het station.{% endblock %}
+
+{% block tekst %}
+<div class="kader kader--geel">
+  <h2>Alleen op afspraak</h2>
+  <p>Er is geen balie en geen inloopspreekuur. Ik ben er alleen op het tijdstip dat we samen hebben afgesproken. Zonder afspraak kunt u er niets afgeven.</p>
+</div>
+
+<h2>Adres</h2>
+<address class="manier__adres">
+  <strong>{{ site.inleverpunt.naam }}</strong>
+  <span>{{ site.inleverpunt.straat }}</span>
+  <span>{{ site.inleverpunt.postcode }} {{ site.inleverpunt.plaats }}</span>
+</address>
+<p><a href="{{ site.inleverpunt.kaart }}" rel="noopener">Open in Google Maps</a></p>
+
+<h2>Zo werkt het</h2>
+<ol class="stappen stappen--verticaal">
+  <li class="stap">
+    <h3>Afspraak maken</h3>
+    <p>App of bel voor een afspraak en vertel kort wat er mis is.</p>
+  </li>
+  <li class="stap">
+    <h3>Afgeven</h3>
+    <p>We zien elkaar op het afgesproken tijdstip in {{ site.inleverpunt.naam }}. U geeft het apparaat af en we vullen samen een opdrachtbon in.</p>
+  </li>
+  <li class="stap">
+    <h3>Prijs horen</h3>
+    <p>Ik onderzoek het apparaat en laat u weten wat er kapot is en wat de reparatie kost.</p>
+  </li>
+  <li class="stap">
+    <h3>Terugkrijgen</h3>
+    <p>Na uw akkoord repareer ik het. We spreken af wanneer en waar u het terugkrijgt.</p>
+  </li>
+</ol>
+
+<h2>Wat kunt u inleveren?</h2>
+<p>Alles wat u makkelijk meeneemt, zoals een laptop, een <a href="kleine-elektronica-reparatie-delft.html">Joy-Con, e-reader of koptelefoon</a>, of een kleine koffiemachine. Voor grote of zware apparaten kom ik liever bij u thuis.</p>
+
+<h2>Neem dit mee</h2>
+<ul>
+  <li>De oplader of het snoer van het apparaat.</li>
+  <li>Bij een laptop: maak als het nog lukt eerst een back-up van uw belangrijkste bestanden.</li>
+</ul>
+{% endblock %}

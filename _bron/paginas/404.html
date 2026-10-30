@@ -1,0 +1,30 @@
+{% extends "basis.html" %}
+{% set h1 = "Deze pagina bestaat niet (meer)" %}
+{% block inhoud %}
+<div class="paginakop">
+  <div class="wrap niet-gevonden">
+    <h1>{{ h1 }}</h1>
+    <p class="paginakop__intro">Misschien is het adres verkeerd overgetypt, of is de pagina verhuisd. Kies hieronder waar u naartoe wilt, of app mij direct.</p>
+    <div class="knoppen">
+      <a class="knop knop--zwart" href="/">Naar de homepagina</a>
+      {{ o.knop_app("App mij", klasse="knop knop--rand") }}
+    </div>
+  </div>
+</div>
+<div class="sectie">
+  <div class="wrap">
+    <div class="bord">
+      {% for groep in ["computers", "apparaten"] %}
+      <div class="bord__groep">
+        <h2>{{ groep_naam[groep] }}</h2>
+        <ul class="rijen" role="list">
+          {% for d in diensten if d.groep == groep %}
+          {{ o.rij(d, pagina.pad) }}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

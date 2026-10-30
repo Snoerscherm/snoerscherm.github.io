@@ -1,0 +1,35 @@
+{% extends "dienst.html" %}
+{% set h1 = "Water over uw laptop? Dit moet u nu doen." %}
+{% set kort = "Water over uw laptop" %}
+{% set wa_tekst = "Hallo Maurits, ik heb iets over mijn laptop gemorst. Kunt u snel kijken?" %}
+{% set foto = {"naam": "laptop-open", "breedtes": [560, 960], "alt": "Een opengeschroefde laptop wordt van binnen nagekeken", "br": 960, "ho": 710} %}
+{% set verder = ["computerhulp-aan-huis-delft.html", "inleverpunt-station-delft.html", "werkwijze-en-kosten.html"] %}
+
+{% block intro %}Heeft u in Delft of omstreken water, koffie of een andere vloeistof over uw laptop laten vallen? Wat u de eerste minuten doet, bepaalt vaak of uw laptop nog te redden is. Hieronder leest u wat u nu moet doen, en waarom haast helpt.{% endblock %}
+
+{% block tekst %}
+<div class="kader kader--geel">
+  <h2>Eerst dit, in deze volgorde</h2>
+  <ol>
+    <li>Zet de laptop meteen uit. Staat hij al uit, zet hem dan niet aan.</li>
+    <li>Haal de oplader eruit en koppel de accu los als dat bij uw model kan.</li>
+    <li>Zet de laptop open en ondersteboven neer, als een omgekeerde V.</li>
+    <li>App of bel mij, ook 's avonds of in het weekend.</li>
+  </ol>
+</div>
+
+<h2>Ik heb net vloeistof over mijn laptop gemorst, wat nu?</h2>
+<p>Zet de laptop meteen uit. Staat hij al uit, zet hem dan niet aan. Haal de stekker van de oplader eruit en koppel, als dat bij uw model kan, de accu los. Zet de laptop vervolgens ondersteboven neer, in de vorm van een omgekeerde V, zodat het vocht eruit kan lopen in plaats van verder naar binnen te trekken. Schud niet met het toestel en gebruik geen föhn of andere warmtebron: warmte kan vocht juist dieper naar binnen duwen en onderdelen laten kromtrekken.</p>
+
+<h2>Mag ik hem weer aanzetten om te kijken of hij het nog doet?</h2>
+<p>Nee. Dit is de fout die het vaakst gemaakt wordt. Een laptop die uitstaat en nat is geworden, overleeft vocht vaak prima zodra hij is schoongemaakt en gedroogd. Zet u hem aan terwijl er nog vocht bij de contacten zit, dan loopt er stroom door plekken waar dat niet hoort. Die kortsluiting kan het moederbord in één keer onherstelbaar beschadigen. Wachten met aanzetten kost u niets, testen kan uw laptop alsnog fataal worden.</p>
+
+<h2>Waarom is snelheid zo belangrijk?</h2>
+<p>Vocht begint vrijwel direct met corroderen, zeker als er suiker of zout in zit, zoals bij koffie, thee of frisdrank. Hoe langer het blijft zitten, en vooral hoe langer de laptop onder stroom heeft gestaan, hoe groter de kans op blijvende schade aan contacten en chips. Een laptop die binnen een paar uur geopend en schoongemaakt wordt, heeft een veel betere kans dan een laptop die een dag blijft liggen.</p>
+
+<h2>Wat doe ik daarna?</h2>
+<p>Leg de laptop niet in een bak rijst. Dat droogt alleen de buitenkant, en er kunnen stof en rijstkorrels naar binnen komen. Neem zo snel mogelijk contact op: meldingen van waterschade gaan bij mij voor. Vertel erbij om welke vloeistof het gaat en of het apparaat nog aan heeft gestaan nadat het gebeurde. Dan kan ik inschatten hoe dringend het is.</p>
+
+<h2>Werkt of studeert u in het centrum?</h2>
+<p>Dan kunt u de laptop op afspraak afgeven bij <a href="inleverpunt-station-delft.html">het inleverpunt naast station Delft</a>. Bij waterschade spreken we zo snel mogelijk een tijd af.</p>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "basis.html" %}
+{#
+  Indeling voor alle pagina's behalve de home. Een pagina zet bovenaan:
+    h1        de hoofdkop
+    kort      (optioneel) korte naam in de kruimels
+    foto      (optioneel) dict met naam, breedtes, alt, br, ho voor de foto naast de kop
+    verder    lijst met URL's van diensten onderaan bij "Ook handig"
+    wa_tekst  het WhatsApp-bericht dat al klaarstaat
+  en vult de blokken intro en tekst (en eventueel zijkolom).
+#}
+{% block inhoud %}
+<div class="paginakop">
+  <div class="wrap">
+    {% if pagina.kruimels %}
+    <nav class="kruimels" aria-label="Kruimelpad">
+      <ol>
+        {% for k in pagina.kruimels %}
+        {% if loop.last %}
+        <li><span aria-current="page">{{ k.naam }}</span></li>
+        {% else %}
+        <li><a href="{{ pagina.pad }}{{ k.url }}">{{ k.naam }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ol>
+    </nav>
+    {% endif %}
+    <div class="paginakop__grid{% if foto is defined and foto %} paginakop__grid--foto{% endif %}">
+      <div>
+        <h1>{{ h1 }}</h1>
+        <p class="paginakop__intro">{% block intro %}{% endblock %}</p>
+        <div class="knoppen">
+          {{ o.knop_app("App mij", wa_tekst|default("Hallo Maurits, ik heb een vraag.")) }}
+          {{ o.knop_bel() }}
+        </div>
+      </div>
+      {% if foto is defined and foto %}
+      <div class="paginakop__foto">
+        {{ o.foto(foto.naam, foto.breedtes, foto.alt, "(min-width: 58rem) 24rem, 1px", foto.br, foto.ho, "eager") }}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="sectie">
+  <div class="wrap">
+    <div class="artikel-grid">
+      <article class="tekst">
+        {% block tekst %}{% endblock %}
+      </article>
+      <aside class="zijkolom" aria-label="Afspraken en contact">
+        {% block zijkolom %}
+        {{ o.label() }}
+        <div class="zijkolom__contact op-zwart">
+          <p><strong>Vraag het Maurits</strong>App een foto van het apparaat of bel, dan hoort u snel of ik kan helpen.</p>
+          {{ o.knop_app("App mij", wa_tekst|default("Hallo Maurits, ik heb een vraag."), "knop knop--geel") }}
+          {{ o.knop_bel("Bel " ~ site.tel, "knop knop--wit-rand") }}
+        </div>
+        {% endblock %}
+      </aside>
+    </div>
+
+    {% if verder is defined and verder %}
+    <section class="verder" aria-labelledby="verder-kop">
+      <h2 id="verder-kop">Ook handig</h2>
+      {{ o.rijen(verder, pagina.pad) }}
+    </section>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

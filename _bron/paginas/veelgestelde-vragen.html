@@ -1,0 +1,43 @@
+{% extends "dienst.html" %}
+{% set h1 = "Veelgestelde vragen" %}
+{% set verder = ["werkwijze-en-kosten.html", "inleverpunt-station-delft.html", "over-mij.html"] %}
+{% set groepen = [
+  ("Kosten en betalen", [
+    ("Wat kost een reparatie?", "<p>Dat hangt af van het apparaat en van wat er kapot is. Na het gratis onderzoek noem ik een vaste prijs, en pas als u daarmee akkoord gaat, begin ik. Er komt geen btw bij, want ik val onder de kleineondernemersregeling.</p>"),
+    ("Kost het onderzoek geld?", "<p>Nee. Het onderzoek is gratis en vrijblijvend. Pas als u akkoord gaat met de prijs die ik daarna noem, ga ik repareren.</p>"),
+    ("Wat als mijn apparaat niet te repareren is?", "<p>Dan betaalt u niets voor het onderzoek. U weet wel wat er mis is, en ik zeg eerlijk of een nieuw apparaat verstandiger is.</p>"),
+    ("Hoe kan ik betalen?", "<p>Na de reparatie krijgt u een factuur en een betaalverzoek per e-mail of WhatsApp. Daarmee betaalt u via Revolut, ING, Google Pay of creditcard. Contant betalen bij het terugbrengen kan ook.</p>"),
+  ]),
+  ("Afspraak en bereikbaarheid", [
+    ("Komt u bij mij thuis?", "<p>Ja, in " ~ site.plaatsen_tekst ~ ". Dat is vaak het handigst voor computerhulp en voor apparaten die u niet wilt versjouwen.</p>"),
+    ("Kan ik mijn apparaat ook ergens afgeven?", "<p>Ja, bij The Social Hub naast station Delft, maar alleen op afspraak. Er is geen balie. Lees <a href=\"inleverpunt-station-delft.html\">hoe het inleverpunt werkt</a>.</p>"),
+    ("Hoe snel kunt u helpen?", "<p>Dat hangt af van mijn agenda en het apparaat. Bij een gehackt account probeer ik binnen 24 uur te reageren, en <a href=\"water-over-laptop-delft.html\">water over een laptop</a> gaat altijd voor.</p>"),
+    ("Wanneer bent u bereikbaar?", "<p>Van " ~ site.uren ~ ", ook in het weekend. Een appje mag altijd; buiten die tijden lees ik het de volgende ochtend.</p>"),
+  ]),
+  ("Wat ik wel en niet repareer", [
+    ("Welke apparaten repareert u?", "<p>Computers en laptops, koffiemachines, stofzuigers, huishoudelijke apparaten en gereedschap, platenspelers en audio, feest- en AV-apparatuur, en kleine elektronica zoals Joy-Cons en e-readers. Op de <a href=\"./#diensten\">homepagina</a> staat per apparaat een pagina.</p>"),
+    ("Wat repareert u niet?", "<p>Telefoons, magnetrons en reparaties waarbij gesoldeerd moet worden, zoals een kapotte laadpoort of de joystick van een PlayStation- of Xbox-controller. Bij twijfel kunt u een foto sturen via WhatsApp.</p>"),
+    ("Werkt u ook voor verenigingen en cafés?", "<p>Ja. Ik repareer rookmachines, lichteffecten, actieve speakers en mengpanelen voor buurthuizen, studenten- en sportverenigingen, cafés en dj's. Zie <a href=\"feest-av-apparatuur-reparatie-delft.html\">feest- en AV-apparatuur</a>.</p>"),
+  ]),
+  ("Garantie", [
+    ("Krijg ik garantie?", "<p>Ja. Op mijn werk zit 3 maanden garantie, gerekend vanaf de dag van de reparatie. Voor onderdelen die ik plaats, geldt de garantie van de leverancier.</p>"),
+    ("Wat als hetzelfde probleem terugkomt?", "<p>Neem dan contact op. Valt het binnen de 3 maanden garantie, dan kijk ik er opnieuw naar zonder kosten voor het werk.</p>"),
+  ]),
+] %}
+{% set vragen = [] %}
+{% for g in groepen %}{% for v in g[1] %}{% set _ = vragen.append(v) %}{% endfor %}{% endfor %}
+
+{% block intro %}De vragen die ik het vaakst krijg, met het antwoord. Staat uw vraag er niet bij, app of bel dan gerust.{% endblock %}
+
+{% block tekst %}
+{% for titel, lijst in groepen %}
+<section class="vragen-groep" aria-labelledby="groep-{{ loop.index }}">
+  <h2 id="groep-{{ loop.index }}">{{ titel }}</h2>
+  <div class="vragen">
+    {% for v, a in lijst %}
+    {% call o.vraag(v) %}{{ a|safe }}{% endcall %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,192 @@
+{% import "onderdelen.html" as o with context %}
+{% set p = pagina.pad %}
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ pagina.titel }}</title>
+<meta name="description" content="{{ pagina.beschrijving }}">
+{% if pagina.noindex %}
+<meta name="robots" content="noindex">
+{% else %}
+<link rel="canonical" href="{{ pagina.canoniek }}">
+{% endif %}
+<meta name="theme-color" content="#ffc41d">
+<meta property="og:type" content="{{ 'website' if pagina.bestand == 'index.html' else 'article' }}">
+<meta property="og:site_name" content="Snoer &amp; Scherm">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="{{ pagina.titel }}">
+<meta property="og:description" content="{{ pagina.beschrijving }}">
+<meta property="og:url" content="{{ pagina.canoniek }}">
+<meta property="og:image" content="{{ site.url }}{{ site.deelbeeld }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Maurits Oldenburg van Snoer &amp; Scherm aan zijn werkplek">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{{ p }}favicon.ico" sizes="48x48">
+<link rel="icon" href="{{ p }}img/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="{{ p }}img/apple-touch-icon.png">
+<link rel="preload" href="{{ p }}fonts/league-spartan-variabel.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ p }}fonts/inter-variabel.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ p }}css/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="{{ p }}js/site.js" defer></script>
+{% block kop_extra %}{% endblock %}
+{% if pagina.schema %}
+<script type="application/ld+json">
+{{ pagina.schema|safe }}
+</script>
+{% endif %}
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-telefoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
+  <symbol id="i-pijl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-omlaag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+  <symbol id="i-kruis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-ster" viewBox="0 0 24 24" fill="currentColor"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+  <symbol id="i-klok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-trein" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.1V7a4 4 0 0 0 8 0V3.1"/><path d="m9 15-1-1"/><path d="m15 15 1-1"/><path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z"/><path d="m8 19-2 3"/><path d="m16 19 2 3"/></symbol>
+</svg>
+
+<a class="overslaan" href="#inhoud">Naar de inhoud</a>
+
+<header class="site-kop">
+  <div class="wrap site-kop__binnen">
+    <a class="logo" href="{{ p }}./" aria-label="Snoer &amp; Scherm, naar de homepagina">
+      <img src="{{ p }}img/logo-snoer-en-scherm.png" width="661" height="96" alt="Snoer &amp; Scherm">
+    </a>
+    <nav class="hoofdnav" aria-label="Hoofdmenu">
+      <ul class="hoofdnav__lijst">
+        <li class="heeft-menu">
+          <button class="hoofdnav__link" type="button" aria-expanded="false" aria-controls="dienstenmenu">Diensten {{ o.icoon("omlaag") }}</button>
+          <div class="menu" id="dienstenmenu">
+            <div class="menu__paneel">
+              {% for groep in ["computers", "apparaten"] %}
+              <div class="menu__groep">
+                <h2>{{ groep_naam[groep] }}</h2>
+                <ul>
+                  {% for d in diensten if d.groep == groep %}
+                  <li><a href="{{ p }}{{ d.url }}"{% if d.url == pagina.bestand %} aria-current="page"{% endif %}>{{ d.naam }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </li>
+        {% for i in info %}
+        <li><a class="hoofdnav__link" href="{{ p }}{{ i.url }}"{% if i.url == pagina.bestand %} aria-current="page"{% endif %}>{{ i.naam }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="kop-acties">
+      <a class="kop-tel" href="{{ site.tel_link }}">{{ o.icoon("telefoon") }}{{ site.tel }}</a>
+      {{ o.knop_app("App mij", klasse="knop knop--zwart kop-app") }}
+      <a class="icoonknop kop-bel-mobiel" href="{{ site.tel_link }}" aria-label="Bel {{ site.tel }}">{{ o.icoon("telefoon") }}</a>
+      <button class="icoonknop menuknop" type="button" aria-expanded="false" aria-controls="mobielmenu" aria-label="Menu openen">
+        {{ o.icoon("menu", "ico ico-open") }}{{ o.icoon("kruis", "ico ico-dicht") }}
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobielmenu" id="mobielmenu">
+  {% for groep in ["computers", "apparaten"] %}
+  <h2>{{ groep_naam[groep] }}</h2>
+  <ul>
+    {% for d in diensten if d.groep == groep %}
+    <li><a href="{{ p }}{{ d.url }}">{{ d.naam }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+  <h2>Snoer &amp; Scherm</h2>
+  <ul>
+    <li><a href="{{ p }}./">Home</a></li>
+    {% for i in info %}
+    <li><a href="{{ p }}{{ i.url }}">{{ "Veelgestelde vragen" if i.naam == "Vragen" else i.naam }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="knoppen">
+    {{ o.knop_app() }}
+    {{ o.knop_bel() }}
+  </div>
+</div>
+
+<main id="inhoud">
+{% block inhoud %}{% endblock %}
+</main>
+
+{% if pagina.soort != "404" %}
+<section class="oproep op-zwart" aria-labelledby="oproep-kop">
+  <div class="wrap oproep__grid">
+    <div>
+      <h2 id="oproep-kop">{% block oproep_kop %}Vertel me wat er kapot is{% endblock %}</h2>
+      <p>{% block oproep_tekst %}Een kort appje met een foto is genoeg om te beginnen. Ik reageer van {{ site.uren }}, ook in het weekend.{% endblock %}</p>
+    </div>
+    <div class="oproep__acties">
+      {{ o.knop_app("App " ~ site.tel, wa_tekst|default("Hallo Maurits, ik heb een vraag."), "knop knop--geel") }}
+      {{ o.knop_bel("Bel " ~ site.tel, "knop knop--wit-rand") }}
+      <p class="oproep__mail">Liever mailen? <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<footer class="site-voet op-zwart">
+  <div class="wrap">
+    <div class="site-voet__grid">
+      <div class="site-voet__merk">
+        <img src="{{ p }}img/logo-snoer-en-scherm-licht.png" width="661" height="96" alt="Snoer &amp; Scherm" loading="lazy">
+        <p>Computerhulp en reparatie aan huis in Delft en omstreken.</p>
+        <a class="site-voet__google" href="{{ site.google }}" rel="noopener">{{ o.icoon("ster") }}Bekijk mijn Google-profiel</a>
+      </div>
+      {% for groep in ["computers", "apparaten"] %}
+      <nav aria-label="{{ groep_naam[groep] }}">
+        <h2>{{ groep_naam[groep] }}</h2>
+        <ul>
+          {% for d in diensten if d.groep == groep %}
+          <li><a href="{{ p }}{{ d.url }}">{{ d.naam }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endfor %}
+      <nav aria-label="Snoer &amp; Scherm">
+        <h2>Snoer &amp; Scherm</h2>
+        <ul>
+          {% for i in info %}
+          <li><a href="{{ p }}{{ i.url }}">{{ "Veelgestelde vragen" if i.naam == "Vragen" else i.naam }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="site-voet__contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>{{ site.eigenaar }}</li>
+          <li><a href="{{ site.tel_link }}">{{ site.tel }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{{ site.plaatsen_tekst }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-voet__onder">
+      <span>&copy; {{ site.jaar }} Snoer &amp; Scherm</span>
+      <span>KvK {{ site.kvk }}</span>
+      <span>Geen btw (kleineondernemersregeling)</span>
+    </div>
+  </div>
+</footer>
+
+{% if pagina.soort != "404" %}
+<div class="plakbalk" inert>
+  {{ o.knop_app("App mij", wa_tekst|default("Hallo Maurits, ik heb een vraag.")) }}
+  {{ o.knop_bel("Bel", "knop knop--geel") }}
+</div>
+{% endif %}
+</body>
+</html>
