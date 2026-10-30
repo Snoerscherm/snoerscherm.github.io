@@ -163,7 +163,7 @@ def bedrijf_schema():
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             "opens": "10:00", "closes": "22:00",
         }],
-        "paymentAccepted": "Contant, creditcard, Revolut, ING, Google Pay",
+        "paymentAccepted": "Contant, overboeking, betaalpas, creditcard, Apple Pay, Google Pay",
         "currenciesAccepted": "EUR",
         "knowsLanguage": "nl",
     }
