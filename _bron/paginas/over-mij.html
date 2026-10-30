@@ -4,13 +4,13 @@
 {% set foto = {"naam": "werkplaats", "breedtes": [480, 800], "alt": "De werkplek van Snoer & Scherm met gereedschap, een monitor en een kat op de plank", "br": 800, "ho": 1000} %}
 {% set verder = ["werkwijze-en-kosten.html", "veelgestelde-vragen.html", "computerhulp-aan-huis-delft.html"] %}
 
-{% block intro %}Snoer &amp; Scherm is mijn eigen bedrijf. Ik help mensen in Delft en omstreken met hun computer, en ik repareer elektrische apparaten die anders bij het afval zouden belanden.{% endblock %}
+{% block intro %}Snoer &amp; Scherm helpt mensen in Delft en omstreken met hun computer, en repareert elektrische apparaten die anders bij het afval zouden belanden.{% endblock %}
 
 {% block tekst %}
 <div class="portret-blok">
   <div>
-    <h2>Eén vast aanspreekpunt</h2>
-    <p>Bij Snoer &amp; Scherm hebt u met één persoon te maken. Ik lees uw appje, ik kom langs of neem het apparaat aan bij het station, ik doe de reparatie en ik stuur de factuur. Heeft u later een vraag, dan krijgt u mij weer aan de lijn.</p>
+    <h2>Hallo, ik ben Maurits</h2>
+    <p>Ik help met computers en laptops, en ik repareer koffiemachines, stofzuigers, audio en ander elektrisch apparaat. Ik leg uit wat er aan de hand is zonder vaktaal, zodat u weet waar u aan toe bent. En als repareren niet meer loont, hoort u dat ook.</p>
   </div>
   <figure class="foto-kaart">
     {{ o.foto("maurits-portret", [400, 720], "Portret van Maurits Oldenburg", "(min-width: 52rem) 18rem, 92vw", 720, 720) }}
@@ -25,15 +25,14 @@
 <p>Veel apparaten gaan kapot aan één klein onderdeel: een versleten rubbertje, een verstopte pomp of een paar koolborstels. Dat vervangen kost meestal minder dan een nieuw apparaat, en het oude hoeft niet weg. Loont repareren niet, dan zeg ik dat eerlijk.</p>
 
 <h2>Hoe ik werk</h2>
-<p>Ik leg uit wat ik doe, zonder vaktaal. U weet de prijs voordat ik begin en u betaalt achteraf. Wat ik niet goed of niet veilig kan repareren, zoals telefoons, magnetrons en soldeerwerk, neem ik niet aan.</p>
+<p>U weet de prijs voordat ik begin en u betaalt achteraf. Wat ik niet goed of niet veilig kan repareren, zoals telefoons, magnetrons en soldeerwerk, neem ik niet aan.</p>
 
 <h2>Gegevens</h2>
 <dl class="feiten">
   <div><dt>Bedrijf</dt><dd>Snoer &amp; Scherm</dd></div>
-  <div><dt>Eigenaar</dt><dd>{{ site.eigenaar }}</dd></div>
+  <div><dt>Contact</dt><dd>{{ site.eigenaar }}</dd></div>
   <div><dt>KvK</dt><dd>{{ site.kvk }}</dd></div>
   <div><dt>Werkgebied</dt><dd>{{ site.plaatsen_tekst }}</dd></div>
   <div><dt>Bereikbaar</dt><dd>Van {{ site.uren }}</dd></div>
-  <div><dt>Btw</dt><dd>Geen, kleineondernemersregeling</dd></div>
 </dl>
 {% endblock %}

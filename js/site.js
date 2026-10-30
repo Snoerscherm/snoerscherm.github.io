@@ -1,4 +1,4 @@
-/* Snoer & Scherm: menu's, plakbalk en het snoer tussen de stappen.
+/* Snoer & Scherm: menu's, plakbalk, bereikbaarheid, vinkjes en het snoer tussen de stappen.
    Alles werkt ook zonder dit script; het voegt alleen gemak en beweging toe. */
 (function () {
   "use strict";
@@ -76,8 +76,25 @@
     });
   });
 
+  /* Bereikbaarheid: open van 10.00 tot 22.00 uur (Nederlandse tijd) */
+  var status = document.querySelector("[data-status]");
+  if (status) {
+    try {
+      var uur = Number(
+        new Intl.DateTimeFormat("nl-NL", { timeZone: "Europe/Amsterdam", hour: "numeric", hourCycle: "h23" }).format(new Date())
+      );
+      var open = uur >= 10 && uur < 22;
+      status.classList.add(open ? "is-open" : "is-dicht");
+      status.querySelector(".status__tekst").textContent = open
+        ? "Nu bereikbaar, tot 22.00 uur"
+        : "Vanaf 10.00 uur weer bereikbaar. Een appje sturen kan altijd.";
+    } catch (e) {
+      /* oude browser: de vaste tekst blijft staan */
+    }
+  }
+
   if (!("IntersectionObserver" in window)) {
-    document.querySelectorAll(".stappen").forEach(function (s) {
+    document.querySelectorAll(".stappen, .afspraken").forEach(function (s) {
       s.classList.add("is-zichtbaar");
     });
     return;
@@ -92,7 +109,7 @@
     if (kop) kop.classList.toggle("is-gescrold", !items[0].isIntersecting);
   }).observe(randje);
 
-  /* Snoer tussen de stappen: trekt zich één keer uit */
+  /* Snoer tussen de stappen trekt zich uit, vinkjes tikken aan: één keer, zodra het in beeld komt */
   var stapObs = new IntersectionObserver(
     function (items) {
       items.forEach(function (it) {
@@ -104,7 +121,7 @@
     },
     { threshold: 0.35 }
   );
-  document.querySelectorAll(".stappen").forEach(function (s) {
+  document.querySelectorAll(".stappen, .afspraken").forEach(function (s) {
     stapObs.observe(s);
   });
 

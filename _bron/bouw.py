@@ -72,8 +72,8 @@ DIENST = {d["url"]: d for d in DIENSTEN}
 INFO = [
     {"url": "werkwijze-en-kosten.html", "naam": "Werkwijze en kosten", "lang": "Werkwijze en kosten",
      "info": "Gratis onderzoek, een vaste prijs vooraf en 3 maanden garantie"},
-    {"url": "inleverpunt-station-delft.html", "naam": "Inleverpunt", "lang": "Inleverpunt station Delft",
-     "info": "Op afspraak inleveren bij The Social Hub, naast het station"},
+    {"url": "inleveren-op-afspraak-delft.html", "naam": "Inleveren", "lang": "Inleveren op afspraak",
+     "info": "Uw apparaat afgeven op een tijd en plek die u uitkomt"},
     {"url": "over-mij.html", "naam": "Over mij", "lang": "Over mij",
      "info": "Wie er achter Snoer & Scherm zit en hoe ik werk"},
     {"url": "veelgestelde-vragen.html", "naam": "Vragen", "lang": "Veelgestelde vragen",
@@ -120,10 +120,10 @@ PAGINAS = [
 
     {"bestand": "werkwijze-en-kosten.html", "titel": "Werkwijze en kosten van een reparatie | Snoer & Scherm",
      "beschrijving": "Zo werkt een reparatie bij Snoer & Scherm: gratis onderzoek, een vaste prijs voordat ik begin, betalen achteraf en 3 maanden garantie op het werk."},
-    {"bestand": "inleverpunt-station-delft.html", "titel": "Apparaat inleveren bij station Delft | Snoer & Scherm",
-     "beschrijving": "Werkt of studeert u in Delft? Lever uw laptop of apparaat op afspraak in bij The Social Hub, Van Leeuwenhoekpark 1, naast station Delft. Alleen op afspraak."},
+    {"bestand": "inleveren-op-afspraak-delft.html", "titel": "Apparaat inleveren op afspraak in Delft | Snoer & Scherm",
+     "beschrijving": "Laptop of apparaat kapot en liever niet thuis wachten? Geef het op afspraak af op een plek die u uitkomt in Delft, bijvoorbeeld naast station Delft."},
     {"bestand": "over-mij.html", "titel": "Over Maurits Oldenburg | Snoer & Scherm in Delft",
-     "beschrijving": "Snoer & Scherm is de eenmanszaak van Maurits Oldenburg: computerhulp en reparatie van elektrische apparaten, aan huis in Delft en omstreken.",
+     "beschrijving": "Maak kennis met Maurits Oldenburg van Snoer & Scherm: computerhulp en reparatie van elektrische apparaten, aan huis in Delft en omstreken.",
      "soort": "over"},
     {"bestand": "veelgestelde-vragen.html", "titel": "Veelgestelde vragen | Snoer & Scherm, computerhulp Delft",
      "beschrijving": "Wat kost een reparatie, hoe snel kunt u komen, wat repareer ik niet en hoe zit het met garantie? Antwoorden op de vragen die ik het vaakst krijg.",
@@ -191,7 +191,7 @@ def schema_voor(p, kruim, vragen):
     if p.get("soort") == "over":
         pagina["@type"] = "AboutPage"
         graaf.append({"@type": "Person", "@id": SITE["url"] + "over-mij.html#maurits", "name": SITE["eigenaar"],
-                      "jobTitle": "Eigenaar en reparateur", "worksFor": {"@id": SITE["url"] + "#bedrijf"},
+                      "jobTitle": "Reparateur", "worksFor": {"@id": SITE["url"] + "#bedrijf"},
                       "image": SITE["url"] + "img/maurits-portret-720.webp"})
     if p.get("soort") == "faq" and vragen:
         pagina["@type"] = ["WebPage", "FAQPage"]

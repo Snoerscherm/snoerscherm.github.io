@@ -12,16 +12,21 @@
 <a class="{{ klasse }}" href="{{ site.tel_link }}">{{ icoon("telefoon") }}<span>{{ tekst }}</span></a>
 {%- endmacro %}
 
-{% macro label(titel="Mijn afspraken met u", kop="p") -%}
-<div class="label">
-  <{{ kop }} class="label__titel">{{ titel }}</{{ kop }}>
-  <dl>
-    <div class="label__rij"><dt>Onderzoek</dt><dd>Gratis en vrijblijvend</dd></div>
-    <div class="label__rij"><dt>Prijs</dt><dd>Vast, voordat ik begin</dd></div>
-    <div class="label__rij"><dt>Betalen</dt><dd>Na de reparatie</dd></div>
-    <div class="label__rij"><dt>Garantie</dt><dd>3 maanden op het werk</dd></div>
-  </dl>
-</div>
+{# De vaste afspraken als afvinklijst. Het vinkje tikt aan zodra de lijst in beeld komt. #}
+{% macro afspraken(variant="balk") -%}
+<ul class="afspraken afspraken--{{ variant }}" role="list" aria-label="Vaste afspraken">
+  {% for titel, uitleg in [
+    ("Gratis onderzoek", "Vrijblijvend, ook als repareren niet lukt"),
+    ("Vaste prijs vooraf", "U beslist voordat ik begin"),
+    ("Betalen achteraf", "Met een betaalverzoek of contant"),
+    ("3 maanden garantie", "Op het werk dat ik doe"),
+  ] %}
+  <li class="afspraak">
+    <svg class="vinkje" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="7"/><path pathLength="1" d="M8 14.5l4.2 4.2L20.5 9.5"/></svg>
+    <span class="afspraak__tekst"><strong>{{ titel }}</strong> <span>{{ uitleg }}</span></span>
+  </li>
+  {% endfor %}
+</ul>
 {%- endmacro %}
 
 {% macro rij(d, pad="", kop="span") -%}

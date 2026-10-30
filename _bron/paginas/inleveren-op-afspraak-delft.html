@@ -1,0 +1,47 @@
+{% extends "dienst.html" %}
+{% set h1 = "Inleveren op afspraak in Delft" %}
+{% set kort = "Inleveren op afspraak" %}
+{% set wa_tekst = "Hallo Maurits, ik wil graag een afspraak maken om mijn apparaat af te geven." %}
+{% set verder = ["kleine-elektronica-reparatie-delft.html", "water-over-laptop-delft.html", "werkwijze-en-kosten.html"] %}
+
+{% block intro %}Komt hulp aan huis niet goed uit? Dan geeft u uw apparaat af op een tijd en plek die we samen afspreken. Handig als u in Delft werkt of studeert, of overdag niet thuis bent.{% endblock %}
+
+{% block tekst %}
+<h2>Waar spreken we af?</h2>
+<p>Een handige plek in het centrum is {{ site.inleverpunt.naam }}, direct naast station Delft. Past een andere plek in Delft of omstreken beter bij u, dan spreken we die af.</p>
+<address class="manier__adres">
+  <span class="manier__adres-label">Bijvoorbeeld bij</span>
+  <strong>{{ site.inleverpunt.naam }}</strong>
+  <span>{{ site.inleverpunt.straat }}, {{ site.inleverpunt.postcode }} {{ site.inleverpunt.plaats }}</span>
+</address>
+<p><a href="{{ site.inleverpunt.kaart }}" rel="noopener">Bekijk op Google Maps</a></p>
+
+<h2>Zo werkt het</h2>
+<ol class="stappen stappen--verticaal">
+  <li class="stap">
+    <h3>Afspraak maken</h3>
+    <p>App of bel en vertel kort wat er mis is. We kiezen samen een tijd en een plek.</p>
+  </li>
+  <li class="stap">
+    <h3>Afgeven</h3>
+    <p>U geeft het apparaat af op de afgesproken tijd en plek, en we vullen samen een opdrachtbon in.</p>
+  </li>
+  <li class="stap">
+    <h3>Prijs horen</h3>
+    <p>Ik onderzoek het apparaat en laat u weten wat er kapot is en wat de reparatie kost.</p>
+  </li>
+  <li class="stap">
+    <h3>Terugkrijgen</h3>
+    <p>Na uw akkoord repareer ik het. We spreken af wanneer en waar u het terugkrijgt.</p>
+  </li>
+</ol>
+
+<h2>Wat kunt u inleveren?</h2>
+<p>Alles wat u makkelijk meeneemt, zoals een laptop, een <a href="kleine-elektronica-reparatie-delft.html">Joy-Con, e-reader of koptelefoon</a>, of een kleine koffiemachine. Grote of zware apparaten, zoals een afzuigkap of een volautomaat, zijn beter bij u thuis te repareren.</p>
+
+<h2>Neem dit mee</h2>
+<ul>
+  <li>De oplader of het snoer van het apparaat.</li>
+  <li>Bij een laptop: maak als het nog lukt eerst een back-up van uw belangrijkste bestanden.</li>
+</ul>
+{% endblock %}

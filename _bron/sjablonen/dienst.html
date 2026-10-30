@@ -50,7 +50,7 @@
       </article>
       <aside class="zijkolom" aria-label="Afspraken en contact">
         {% block zijkolom %}
-        {{ o.label() }}
+        {{ o.afspraken("kaart") }}
         <div class="zijkolom__contact op-zwart">
           <p><strong>Vraag het Maurits</strong>App een foto van het apparaat of bel, dan hoort u snel of ik kan helpen.</p>
           {{ o.knop_app("App mij", wa_tekst|default("Hallo Maurits, ik heb een vraag."), "knop knop--geel") }}

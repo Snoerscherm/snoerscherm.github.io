@@ -2,27 +2,25 @@
 {% set h1 = "Apparaat stuk?" %}
 {% block inhoud %}
 <section class="hero" aria-labelledby="hero-kop">
-  <div class="wrap hero__grid">
+  <div class="wrap">
+  <div class="hero__grid">
     <div>
       <h1 id="hero-kop">Apparaat stuk? <span class="hero__ondertitel">Computerhulp en reparatie aan huis in Delft en omstreken</span></h1>
-      <p class="hero__tekst">Ik ben Maurits van Snoer &amp; Scherm. Ik help met computers en laptops, en ik repareer koffiemachines, stofzuigers, audio en ander elektrisch apparaat. Meestal bij u thuis in {{ site.plaatsen_tekst }}. Werkt of studeert u in Delft, dan kunt u uw apparaat ook op afspraak inleveren naast het station.</p>
+      <p class="hero__tekst">Ik ben Maurits van Snoer &amp; Scherm. Ik help met computers en laptops, en ik repareer koffiemachines, stofzuigers, audio en ander elektrisch apparaat. Bij u thuis in {{ site.plaatsen_tekst }}, of u geeft uw apparaat af op een plek die u uitkomt.</p>
       <div class="knoppen">
         {{ o.knop_app("App mij") }}
         {{ o.knop_bel() }}
       </div>
-      <p class="hero__bereik">{{ o.icoon("klok") }}Bereikbaar van {{ site.uren }}, ook in het weekend</p>
+      <p class="status" data-status><span class="status__punt" aria-hidden="true"></span><span class="status__tekst">Bereikbaar van {{ site.uren }}, ook in het weekend</span></p>
     </div>
 
-    <figure class="lijst" style="margin:0">
+    <figure class="lijst">
       <div class="lijst__foto">
         {{ o.foto("maurits-werkplek", [560, 840, 1200], "Maurits Oldenburg van Snoer & Scherm aan zijn werkplek met een laptop", "(min-width: 74rem) 33rem, (min-width: 58rem) 45vw, 92vw", 1200, 896, "eager", true) }}
       </div>
-      <div class="hanger">
-        <svg class="hanger__knoop" viewBox="0 0 30 34" aria-hidden="true"><path pathLength="1" d="M15 33 C 3 30, 2 9, 15 7 C 28 9, 27 30, 15 33"/></svg>
-        <span class="hanger__snoer" aria-hidden="true"></span>
-        {{ o.label() }}
-      </div>
     </figure>
+  </div>
+  {{ o.afspraken("balk") }}
   </div>
 </section>
 
@@ -78,7 +76,7 @@
 <section class="sectie sectie--papier" aria-labelledby="manieren-kop">
   <div class="wrap">
     <div class="sectie__kop">
-      <h2 id="manieren-kop">Bij u thuis of bij het station</h2>
+      <h2 id="manieren-kop">Bij u thuis of op een afgesproken plek</h2>
       <p>Kies wat voor u het makkelijkst is.</p>
     </div>
     <div class="manieren">
@@ -88,26 +86,27 @@
         </div>
         <div class="manier__inhoud">
           <span class="badge">{{ o.icoon("pin") }}{{ site.plaatsen_tekst }}</span>
-          <h3>Ik kom bij u thuis</h3>
-          <p>Handig voor computerhulp en voor apparaten die u liever niet versjouwt, zoals een afzuigkap of een volautomaat. Ik werk aan uw eigen tafel en leg uit wat ik doe.</p>
+          <h3>Hulp bij u thuis</h3>
+          <p>Handig voor computerhulp en voor apparaten die u liever niet versjouwt, zoals een afzuigkap of een volautomaat. De reparatie gebeurt aan uw eigen tafel, met uitleg in gewone woorden.</p>
           <a class="tekstlink" href="computerhulp-aan-huis-delft.html">Computerhulp aan huis {{ o.icoon("pijl") }}</a>
         </div>
       </article>
       <article class="manier manier--zwart op-zwart">
         <div class="manier__inhoud">
-          <span class="badge">{{ o.icoon("trein") }}Alleen op afspraak</span>
-          <h3>Inleveren naast station Delft</h3>
-          <p>Voor studenten en iedereen die in het centrum werkt. Er is geen balie en geen inloop, dus zonder afspraak kunt u er niets afgeven.</p>
+          <span class="badge">{{ o.icoon("klok") }}Op afspraak</span>
+          <h3>Afgeven waar het u uitkomt</h3>
+          <p>Werkt of studeert u in Delft, of bent u overdag niet thuis? Dan spreken we een tijd en plek af waar u het apparaat afgeeft.</p>
           <ol class="mini-stappen">
-            <li>U appt voor een afspraak.</li>
-            <li>We zien elkaar op het afgesproken tijdstip en u geeft het apparaat af.</li>
+            <li>U appt of belt voor een afspraak.</li>
+            <li>U geeft het apparaat af op de afgesproken tijd en plek.</li>
             <li>U hoort wat er kapot is en wat het kost, voordat ik begin.</li>
           </ol>
           <address class="manier__adres">
+            <span class="manier__adres-label">Bijvoorbeeld bij</span>
             <strong>{{ site.inleverpunt.naam }}</strong>
-            <span>{{ site.inleverpunt.straat }}, {{ site.inleverpunt.postcode }} {{ site.inleverpunt.plaats }}</span>
+            <span>{{ site.inleverpunt.straat }}, naast station Delft</span>
           </address>
-          <a class="tekstlink" href="inleverpunt-station-delft.html">Zo werkt het inleverpunt {{ o.icoon("pijl") }}</a>
+          <a class="tekstlink" href="inleveren-op-afspraak-delft.html">Zo werkt inleveren op afspraak {{ o.icoon("pijl") }}</a>
         </div>
       </article>
     </div>
@@ -121,7 +120,7 @@
     </div>
     <div class="over__tekst">
       <h2 id="over-kop">Ik ben Maurits</h2>
-      <p class="lead">Snoer &amp; Scherm is mijn eigen bedrijf. U appt met mij, ik kom langs en ik doe zelf de reparatie.</p>
+      <p class="lead">Ik help mensen in Delft en omstreken met hun computer, en met elektrische apparaten die het niet meer doen.</p>
       <p>Ik leg uit wat er kapot is zonder vaktaal, en ik zeg het eerlijk als repareren niet meer loont. Een apparaat dat weer werkt, scheelt u een nieuwe aankoop en hoeft niet bij het afval.</p>
       <p><a class="tekstlink" href="over-mij.html">Meer over mij {{ o.icoon("pijl") }}</a></p>
     </div>
@@ -135,7 +134,7 @@
     </div>
     <div class="vragen">
       {% call o.vraag("Wat kost een reparatie?") %}
-      <p>Dat hangt af van het apparaat en van wat er kapot is. Na het gratis onderzoek noem ik een vaste prijs, en pas als u daarmee akkoord gaat, begin ik. Er komt geen btw bij, want ik val onder de kleineondernemersregeling.</p>
+      <p>Dat hangt af van het apparaat en van wat er kapot is. Na het gratis onderzoek noem ik een vaste prijs, en pas als u daarmee akkoord gaat, begin ik.</p>
       {% endcall %}
       {% call o.vraag("Wat als mijn apparaat niet te repareren is?") %}
       <p>Dan betaalt u niets voor het onderzoek. U weet wel wat er mis is, en ik zeg eerlijk of een nieuw apparaat verstandiger is.</p>

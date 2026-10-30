@@ -649,7 +649,7 @@ p {
 
 .hero {
   background: var(--geel);
-  padding-block: clamp(2.25rem, 1rem + 5vw, 5rem) clamp(6rem, 4rem + 6vw, 7.5rem);
+  padding-block: clamp(2.25rem, 1rem + 5vw, 5rem) clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
   overflow: hidden;
 }
 
@@ -699,27 +699,23 @@ p {
   margin-top: 2rem;
 }
 
-.hero__bereik {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
-}
-
-.hero__bereik .ico {
-  width: 1.1rem;
-  height: 1.1rem;
-}
-
-/* Foto met het reparatielabel aan een snoer */
+/* Foto met een zwart blok erachter dat bij binnenkomst op zijn plek schuift */
 
 .lijst {
   position: relative;
+  margin: 0 14px 14px 0;
+}
+
+.lijst::before {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border-radius: var(--r-l);
+  background: var(--zwart);
 }
 
 .lijst__foto {
+  position: relative;
   overflow: hidden;
   border: 3px solid var(--zwart);
   border-radius: var(--r-l);
@@ -732,140 +728,190 @@ p {
   object-fit: cover;
 }
 
-.hanger {
-  position: absolute;
-  top: -1.4rem;
-  left: 5%;
-  width: min(19.5rem, 80%);
-  height: calc(47% + 1.4rem);
-  pointer-events: none;
+/* Bereikbaarheid: groen en zacht pulserend binnen de openingstijden */
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
 }
 
-.hanger__knoop {
+.status__punt {
+  position: relative;
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--zwart);
+}
+
+.status.is-open .status__punt {
+  background: #15803d;
+}
+
+.status.is-dicht .status__punt {
+  background: var(--grijs);
+}
+
+.status__punt::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 50%;
-  width: 30px;
-  height: 34px;
-  margin-left: -15px;
+  inset: 0;
+  border-radius: 50%;
+  background: #15803d;
+  opacity: 0;
+}
+
+/* Vaste afspraken als afvinklijst */
+
+.afspraken {
+  display: grid;
+  gap: 1.1rem 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.afspraak {
+  display: grid;
+  grid-template-columns: 1.85rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.afspraak:nth-child(2) {
+  --i: 1;
+}
+
+.afspraak:nth-child(3) {
+  --i: 2;
+}
+
+.afspraak:nth-child(4) {
+  --i: 3;
+}
+
+.vinkje {
+  width: 1.85rem;
+  height: 1.85rem;
   overflow: visible;
 }
 
-.hanger__knoop path {
+.vinkje rect {
+  fill: var(--zwart);
+}
+
+.vinkje path {
   fill: none;
-  stroke: var(--zwart);
-  stroke-width: 3.5;
+  stroke: var(--geel);
+  stroke-width: 3.2;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.hanger__snoer {
-  position: absolute;
-  top: 31px;
-  bottom: 0;
-  left: 50%;
-  width: 3.5px;
-  margin-left: -1.75px;
-  border-radius: 2px;
-  background: var(--zwart);
-  transform-origin: 50% 0;
-}
-
-.label {
-  position: relative;
-  background: var(--wit);
-  border: 2px solid var(--zwart);
-  border-radius: 10px 10px 16px 16px;
-  padding: 2.5rem 1.1rem 1rem;
-  font-size: 0.9375rem;
+.afspraak__tekst {
+  display: grid;
+  gap: 0.15rem;
   line-height: 1.35;
 }
 
-.label::before {
-  content: "";
-  position: absolute;
-  top: 0.75rem;
-  left: 50%;
-  width: 1.05rem;
-  height: 1.05rem;
-  margin-left: -0.525rem;
-  border-radius: 50%;
-  background: var(--geel);
-  border: 3px solid var(--zwart);
-}
-
-.label__titel {
-  margin: 0 0 0.6rem;
+.afspraak__tekst strong {
   font-family: var(--kop);
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;
+  padding-top: 0.25em;
 }
 
-.label dl {
-  margin: 0;
-}
-
-.label__rij {
-  display: grid;
-  grid-template-columns: 5.2rem 1fr;
-  gap: 0.75rem;
-  padding: 0.5rem 0;
-  border-top: 1.5px dashed var(--zwart);
-}
-
-.label dt {
+.afspraak__tekst span {
   color: var(--tekst-2);
+  font-size: 0.9375rem;
 }
 
-.label dd {
-  margin: 0;
-  font-weight: 600;
+.afspraken--balk {
+  margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+  padding: 1.35rem clamp(1.1rem, 0.8rem + 1.5vw, 2rem);
+  border: 2px solid var(--zwart);
+  border-radius: var(--r-l);
+  background: var(--wit);
 }
 
-.hanger .label {
-  position: absolute;
-  top: calc(100% - 1.27rem);
-  left: 0;
-  width: 100%;
-  transform: rotate(-3deg);
-  transform-origin: 50% 1.27rem;
-  box-shadow: 0 22px 30px -20px rgba(0, 0, 0, 0.5);
-  pointer-events: auto;
-}
-
-@media (max-width: 57.99rem) {
-  .hero .lijst {
-    margin-bottom: 7.5rem;
+@media (min-width: 34rem) {
+  .afspraken--balk {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 26rem) {
-  .hanger {
-    left: 3%;
-    width: 86%;
-    height: calc(42% + 1.4rem);
-  }
-  .label__rij {
-    grid-template-columns: 5rem 1fr;
+@media (min-width: 62rem) {
+  .afspraken--balk {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-/* Eén moment bij binnenkomst: knoop, snoer, label zwaait in. */
+.afspraken--kaart {
+  padding: 1.35rem 1.25rem;
+  border: 2px solid var(--zwart);
+  border-radius: var(--r-m);
+  background: var(--wit);
+}
+
+/* Bij binnenkomst: het blok achter de foto schuift op zijn plek, daarna tikken
+   de vinkjes één voor één aan. De status-punt pulseert drie keer. */
 @media (prefers-reduced-motion: no-preference) {
-  .hero .hanger__knoop path {
+  .hero .lijst::before {
+    animation: blok-in 520ms var(--ease-out-sterk) 120ms both;
+  }
+
+  .js .afspraken .vinkje rect {
+    opacity: 0;
+    transform: scale(0.82);
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  .js .afspraken .vinkje path {
     stroke-dasharray: 1;
-    animation: knoop 320ms var(--ease-out) 250ms both;
+    stroke-dashoffset: 1;
   }
-  .hero .hanger__snoer {
-    animation: snoer 480ms var(--ease-in-out) 480ms both;
+
+  .js .afspraken.is-zichtbaar .vinkje rect {
+    animation: vak-in 200ms var(--ease-out) calc(var(--i, 0) * 140ms + 120ms) both;
   }
-  .hero .hanger .label {
-    animation: label-zwaai 950ms var(--ease-out) 820ms both;
+
+  .js .afspraken.is-zichtbaar .vinkje path {
+    animation: vink 260ms var(--ease-out) calc(var(--i, 0) * 140ms + 240ms) both;
+  }
+
+  .status.is-open .status__punt::after {
+    animation: puls 1600ms var(--ease-out) 600ms 3;
   }
 }
 
-@keyframes knoop {
+@keyframes blok-in {
+  from {
+    transform: translate(-14px, -14px);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes vak-in {
+  from {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes vink {
   from {
     stroke-dashoffset: 1;
   }
@@ -874,29 +920,14 @@ p {
   }
 }
 
-@keyframes snoer {
+@keyframes puls {
   from {
-    transform: scaleY(0);
+    opacity: 0.55;
+    transform: scale(1);
   }
   to {
-    transform: scaleY(1);
-  }
-}
-
-@keyframes label-zwaai {
-  0% {
     opacity: 0;
-    transform: translateY(-10px) rotate(-13deg);
-  }
-  45% {
-    opacity: 1;
-    transform: translateY(0) rotate(2.5deg);
-  }
-  75% {
-    transform: rotate(-4.5deg);
-  }
-  100% {
-    transform: rotate(-3deg);
+    transform: scale(2.8);
   }
 }
 
@@ -1262,6 +1293,11 @@ p {
   background: #1c1c1c;
   color: var(--wit);
   font-style: normal;
+}
+
+.manier__adres-label {
+  color: var(--nacht-2);
+  font-size: 0.875rem;
 }
 
 .manier__adres strong {
@@ -1852,11 +1888,6 @@ p {
 .zijkolom {
   display: grid;
   gap: 1.5rem;
-}
-
-.zijkolom .label {
-  transform: rotate(-1.5deg);
-  margin-top: 0.5rem;
 }
 
 .zijkolom__contact {
